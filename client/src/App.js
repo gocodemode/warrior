@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch/NoMatch";
 import Login from "./containers/Login/Login";
-import ViewWorkout from "./containers/ViewWorkout/ViewWorkout";
 
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/login" component={Login}/>
-          <Route exact path="/viewworkout" component={ViewWorkout}/>
           <Route component={NoMatch}/>
         </Switch>
       </Router>
