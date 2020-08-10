@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const routes = require("./routes");
  
 const app = express();
  
@@ -13,7 +14,9 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static("client/build")); 
 
- 
+// const WorkoutsController = require("./controllers/workoutsController");
+// const InstructorController = require("./controllers/instructorsController");
+
 app.get("/api/config", (req, res) => {
     res.json({
         success: true,
@@ -24,6 +27,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(routes);
+// app.use(WorkoutsController);
+// app.use(InstructorController);
  
 app.get("*"), (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
