@@ -3,6 +3,7 @@ import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch/NoMatch";
+import Login from "./containers/Login/Login";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home}/>
+          <Route exact path="/login" component={Login}/>
           <Route component={NoMatch}/>
         </Switch>
       </Router>
