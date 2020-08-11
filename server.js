@@ -2,10 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const routes = require("./routes");
+const router = require("express").Router();
  
 const app = express();
  
 const PORT = process.env.PORT || 3001;
+
+// const WorkoutsController = require("./controllers/workoutsController");
  
 app.use(express.urlencoded({ 
     extended: true, 
@@ -33,7 +36,7 @@ app.use(routes);
  
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
-}
+})
 
 mongoose
 .connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {
