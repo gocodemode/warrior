@@ -10,25 +10,43 @@ mongoose.connect(
 
 const workoutSeed = [
   {
-    title: "Bikram Yoga",
-    instructor: "Brian Warner",
-    synopsis:
+    name: "Bikram Yoga",
+    description:
       "Hot yoga in a studio.",
-    date: new Date(Date.now())
+    location:"Columbus",
+    Sunday: false,
+    Monday: false,
+    Tuesday: false,
+    Wednesday: false,
+    Thursday: false,
+    Friday: false,
+    Saturday: true
   },
   {
-    title: "Afternoon Yoga",
-    instructor: "Greg Monroe II",
-    synopsis:
+    name: "Afternoon Yoga",
+    description:
       "Yoga in the park",
-    date: new Date(Date.now())
+      location:"Savannah",
+      Sunday: false,
+      Monday: false,
+      Tuesday: false,
+      Wednesday: false,
+      Thursday: true,
+      Friday: false,
+      Saturday: false
   },
   {
-    title: "Yoga in the morning",
-    instructor: "Kaleb Garrison",
-    synopsis:
+    name: "Yoga in the morning",
+    description:
       "Yoga at sunrise.",
-    date: new Date(Date.now())
+      location:"Atlanta",
+      Sunday: false,
+      Monday: false,
+      Tuesday: false,
+      Wednesday: true,
+      Thursday: false,
+      Friday: false,
+      Saturday: false
   },
 ];
 
