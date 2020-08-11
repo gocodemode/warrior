@@ -23,7 +23,7 @@ const Footer = () => {
 
         <Row>
           <Col >
-            <p>Copyright Warrior</p>
+            <p>Copyright © KGB-C </p>
           </Col>
 
           <Col style={styles.alignRight}><Link>Instructor ?</Link></Col>
