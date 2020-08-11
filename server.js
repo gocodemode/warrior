@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 
 app.use(express.json());
 app.use(express.static("client/build")); 
-
+app.use("/api/workouts", "./routes/workouts");
 // const WorkoutsController = require("./controllers/workoutsController");
 // const InstructorController = require("./controllers/instructorsController");
 
@@ -28,12 +28,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(routes);
+
 // app.use(WorkoutsController);
 // app.use(InstructorController);
  
-app.get("*"), (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-}
+// app.get("*"), (req, res) => {
+//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// }
 
 mongoose
     .connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {

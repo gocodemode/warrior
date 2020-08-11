@@ -8,7 +8,7 @@ router.route("/")
 
 // Matches with "/api/workouts/:id"
 router
-  .route("/:id")
+  .route("/api/workouts/:id")
   .get(workoutsController.findById)
   .put(workoutsController.update)
   .delete(workoutsController.remove);
