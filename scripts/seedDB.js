@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models/index");
-// const Workouts = require("../models/workouts");
-// const Instructor = require("../models/instructor");
+const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 
