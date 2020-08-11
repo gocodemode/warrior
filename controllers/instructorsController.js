@@ -1,25 +1,8 @@
 const express = require("express");
+// const router = express.Router();
 const db = require("../models");
 
-module.exports = {
-  findAll: function(req, res) {
-    db.Instructor
-      .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
-  create: function(req, res) {
-    db.Instructor
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  }
-}
-
-module.exports = router;
-
-// READ ALL INSTRUCTORS
+// // READ ALL INSTRUCTORS
 // router.get("/api/instructors", (req, res) => {
 //   db.Instructor.find({})
 //     .populate("workouts")
@@ -58,6 +41,42 @@ module.exports = router;
 //       });
 //     });
 // });
-// EDIT
+// // EDIT
 
-// DELETE
+// // DELETE
+
+// module.exports = router;
+
+module.exports = {
+  findAll: function(req, res) {
+    db.Instructor
+      .find(req.query)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findById: function(req, res) {
+    db.Instructor
+      .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  create: function(req, res) {
+    db.Instructor
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  update: function(req, res) {
+    db.Instructor
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  remove: function(req, res) {
+    db.Instructor
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
+};
