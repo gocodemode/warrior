@@ -19,16 +19,17 @@ const Footer = () => {
   return (
     <div>
       <footer style={styles.footer}>
-          <Container>
+        <Container>
+          <Row>
+            <Col>
+              <p>Copyright © KGB-C </p>
+            </Col>
 
-        <Row>
-          <Col >
-            <p>Copyright Warrior</p>
-          </Col>
-
-          <Col style={styles.alignRight}><Link>Instructor ?</Link></Col>
-        </Row>
-          </Container>
+            <Col style={styles.alignRight}>
+              <Link>Instructor ?</Link>
+            </Col>
+          </Row>
+        </Container>
       </footer>
     </div>
   );
