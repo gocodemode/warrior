@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch/NoMatch";
 import Login from "./containers/Login/Login";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
