@@ -26,7 +26,7 @@ const Footer = () => {
             </Col>
 
             <Col style={styles.alignRight}>
-              <Link >Instructor ?</Link>
+              <Link to="/login">Instructor ?</Link>
             </Col>
           </Row>
         </Container>

@@ -49,7 +49,7 @@ mongoose
     .catch((err) => {
     console.log("Unable to connect to database.");
     console.log(err);
-    }):
+    });
  
 app.listen(PORT, function() {
   console.log(`Express server is running on http://localhost:${PORT}!`);
