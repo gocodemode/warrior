@@ -3,43 +3,83 @@ const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/warrior"
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warrior");
 
 const workoutSeed = [
   {
-    title: "Bikram Yoga",
-    instructor: "Brian Warner",
-    synopsis:
-      "Hot yoga in a studio.",
-    date: new Date(Date.now())
+    name: "Bikram Yoga",
+    description: "Hot yoga in a studio.",
+    location: "Columbus",
+    Sunday: false,
+    Monday: false,
+    Tuesday: false,
+    Wednesday: false,
+    Thursday: false,
+    Friday: false,
+    Saturday: true,
   },
   {
-    title: "Afternoon Yoga",
-    instructor: "Greg Monroe II",
-    synopsis:
-      "Yoga in the park",
-    date: new Date(Date.now())
+    name: "Afternoon Yoga",
+    description: "Yoga in the park",
+    location: "Savannah",
+    Sunday: false,
+    Monday: false,
+    Tuesday: false,
+    Wednesday: false,
+    Thursday: true,
+    Friday: false,
+    Saturday: false,
   },
   {
-    title: "Yoga in the morning",
-    instructor: "Kaleb Garrison",
-    synopsis:
-      "Yoga at sunrise.",
-    date: new Date(Date.now())
+    name: "Yoga in the morning",
+    description: "Yoga at sunrise.",
+    location: "Atlanta",
+    Sunday: false,
+    Monday: false,
+    Tuesday: false,
+    Wednesday: true,
+    Thursday: false,
+    Friday: false,
+    Saturday: false,
   },
 ];
 
-db.Workouts
-  .remove({})
+db.Workouts.remove({})
   .then(() => db.Workouts.collection.insertMany(workoutSeed))
-  .then(data => {
+  .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
-  .catch(err => {
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+
+const instructorSeed = [
+  {
+    name: "John Smith",
+    email: "john@test.com",
+    password: "Test123",
+  },
+  {
+    name: "Bob Snow",
+    email: "Bob@test.com",
+    password: "Test123",
+  },
+  {
+    name: "Susan Sky",
+    email: "susan@test.com",
+    password: "Test123",
+  },
+];
+
+db.Instructor.remove({})
+  .then(() => db.Instructor.collection.insertMany(instructorSeed))
+  .then((data) => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch((err) => {
     console.error(err);
     process.exit(1);
   });

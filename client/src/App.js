@@ -1,10 +1,12 @@
 import React, {useEffect} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch/NoMatch";
 import Login from "./containers/Login/Login";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
           <Route exact path="/login" component={Login}/>
           <Route component={NoMatch}/>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
