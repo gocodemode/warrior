@@ -7,6 +7,7 @@ import NoMatch from "./containers/NoMatch/NoMatch";
 import Login from "./containers/Login/Login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer";
+import Navbar from "./components/Nav/Nav";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/login" component={Login}/>
