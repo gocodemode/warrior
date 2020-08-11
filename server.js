@@ -31,12 +31,12 @@ app.use(routes);
 // app.use(WorkoutsController);
 // app.use(InstructorController);
  
-app.get("*"), (req, res) => {
+app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 }
 
 mongoose
-    .connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {
+.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
@@ -46,7 +46,7 @@ mongoose
     .catch((err) => {
     console.log("Unable to connect to database.");
     console.log(err);
-    });
+    }):
  
 app.listen(PORT, function() {
   console.log(`Express server is running on http://localhost:${PORT}!`);
