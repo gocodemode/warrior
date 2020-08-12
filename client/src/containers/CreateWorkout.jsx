@@ -2,13 +2,13 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 const styles = {
     container: {
         marginTop: 25,
     },
 };
-
 
 
 const CreateWorkout = () => {
@@ -32,7 +32,11 @@ const CreateWorkout = () => {
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
-                        <Button variant="success">Create</Button>{' '}      
+                        <Button variant="success">
+                            <Link to="/viewworkouts">
+                            Create
+                            </Link>
+                        </Button>{' '}      
                     </Form.Group>
                 </Form>
             </Container>
