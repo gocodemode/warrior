@@ -6,36 +6,30 @@ const styles = {
   footer: {
     position: "fixed",
     left: 0,
-    marginTop: "3em",
+    height: "35px",
     bottom: 0,
     width: "100%",
-    backgroundColor: "#E5E5E5",
-    color: "black",
+    backgroundColor: "#000",
+    color: "#f29c13",
+    marginTop: "auto",
+
   },
-  alignRight: { textAlign: "right" },
+
   alignLeft: { textAlign: "left" },
-  brim : {
-    marginTop: "3em",
-  }
 };
 
 const Footer = () => {
   return (
     <div>
-      <div style={styles.brim}>
-        <Footer style={styles.footer}>
-          <Container>
-            <Row>
-              <Col>
-                <p>Copyright © KGB-C </p>
-              </Col>
-              <Col style={styles.alignRight}>
-                <Link to="/login">Instructor ?</Link>
-              </Col>
-            </Row>
-          </Container>
-        </Footer>
-      </div>
+      <footer style={styles.footer}>
+        <Container>
+          <Row>
+            <Col>
+              &copy;{new Date().getFullYear()} KGB-C | All Rights Reserved
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </div>
   );
 };

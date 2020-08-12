@@ -1,12 +1,6 @@
 import React from "react";
-import InputGroup from "react-bootstrap/InputGroup";
-import ListGroup from "react-bootstrap/ListGroup";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import  { InputGroup, ListGroup, Container, Row, Button, Form, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Col from "react-bootstrap/Col"
 
 const styles = {
   Row:{
@@ -64,7 +58,7 @@ const ViewWorkout = () => {
             <Row>
             <InputGroup>
                 <ListGroup>
-                  <ListGroup.Item>Goat Yoga in Savannah on Tuesday 5 PM</ListGroup.Item>
+                  <ListGroup.Item style={styles.ListGroupItem}>Goat Yoga in Savannah on Tuesday 5 PM</ListGroup.Item>
                 </ListGroup>
                 <InputGroup.Append>
                   <Button variant="outline-secondary">
@@ -82,7 +76,7 @@ const ViewWorkout = () => {
             <Row>
             <InputGroup>
                 <ListGroup>
-                  <ListGroup.Item>Rooftop Yoga in Atlanta on Friday 8 PM</ListGroup.Item>
+                  <ListGroup.Item style={styles.ListGroupItem}>Rooftop Yoga in Atlanta on Friday 8 PM</ListGroup.Item>
                 </ListGroup>
                 <InputGroup.Append>
                   <Button variant="outline-secondary">
@@ -100,7 +94,7 @@ const ViewWorkout = () => {
             <Row>
             <InputGroup>
                 <ListGroup>
-                  <ListGroup.Item>Garden Yoga in Columbus on Saturday 7 PM</ListGroup.Item>
+                  <ListGroup.Item style={styles.ListGroupItem}>Garden Yoga in Columbus on Saturday 7 PM</ListGroup.Item>
                 </ListGroup>
                 <InputGroup.Append>
                   <Button variant="outline-secondary">
@@ -110,96 +104,6 @@ const ViewWorkout = () => {
                   <Link to="/updateworkout">
                         <i class="fas fa-edit"></i>
                   </Link>
-                  </Button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Row>
-            <Row>
-                {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-              <InputGroup>
-                <ListGroup>
-                  <ListGroup.Item>Yoga in Atlanta on Monday 7 PM</ListGroup.Item>
-                </ListGroup>
-                <InputGroup.Append>
-                  <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times"></i>
-                  </Button>
-                  <Button variant="outline-secondary">
-                  <Link to="/updateworkout">
-                        <i class="fas fa-edit"></i>
-                    </Link>
-                  </Button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Row>
-            <Row>
-                {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-              <InputGroup>
-                <ListGroup>
-                  <ListGroup.Item>Yoga in Atlanta on Monday 7 PM</ListGroup.Item>
-                </ListGroup>
-                <InputGroup.Append>
-                  <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times"></i>
-                  </Button>
-                  <Button variant="outline-secondary">
-                  <Link to="/updateworkout">
-                        <i class="fas fa-edit"></i>
-                    </Link>
-                  </Button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Row>
-            <Row>
-                {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-              <InputGroup>
-                <ListGroup>
-                  <ListGroup.Item>Yoga in Atlanta on Monday 7 PM</ListGroup.Item>
-                </ListGroup>
-                <InputGroup.Append>
-                  <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times"></i>
-                  </Button>
-                  <Button variant="outline-secondary">
-                  <Link to="/updateworkout">
-                        <i class="fas fa-edit"></i>
-                    </Link>
-                  </Button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Row>
-            <Row>
-                {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-              <InputGroup>
-                <ListGroup>
-                  <ListGroup.Item>Yoga in Atlanta on Monday 7 PM</ListGroup.Item>
-                </ListGroup>
-                <InputGroup.Append>
-                  <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times"></i>
-                  </Button>
-                  <Button variant="outline-secondary">
-                  <Link to="/updateworkout">
-                        <i class="fas fa-edit"></i>
-                    </Link>
-                  </Button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Row>
-            <Row>
-                {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-              <InputGroup>
-                <ListGroup>
-                  <ListGroup.Item>Yoga in Atlanta on Monday 7 PM</ListGroup.Item>
-                </ListGroup>
-                <InputGroup.Append>
-                  <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times"></i>
-                  </Button>
-                  <Button variant="outline-secondary">
-                  <Link to="/updateworkout">
-                        <i class="fas fa-edit"></i>
-                    </Link>
                   </Button>
                 </InputGroup.Append>
               </InputGroup>

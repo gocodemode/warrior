@@ -1,15 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+// import { Container } from "react-bootstrap";
+// import "./Home.css";
 
-
-
-class Home extends Component {
-    render() {
-        return (
-            <div >
-                <h1>Hello World </h1>
-            </div>
-        );
+const styles = {
+    image: {
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: "50%"
     }
+}
+class Home extends Component {
+  render() {
+    return (
+      <div  >
+        {/* <Container > */}
+        
+              
+            
+            <img src="/images/yoga.png" style={styles.image} alt="woman-doing-yoga" />
+         
+        {/* </Container> */}
+      </div>
+    );
+  }
 }
 
 export default Home;
