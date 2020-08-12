@@ -11,7 +11,6 @@ const styles = {
 };
 
 
-
 const CreateWorkout = () => {
     return (
         <div>

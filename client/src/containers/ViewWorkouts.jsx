@@ -12,7 +12,13 @@ const ViewWorkout = () => {
     <div>
       <Container>
         <Row>
-          <h1>View Workouts</h1>
+          <h1>My Workouts</h1>
+              <Button variant="success">
+                <Link to="/createworkout">Add Workout</Link>
+              </Button>{" "}
+              <Button variant="success">
+                <Link to="/myaccount">View My Profile</Link>
+              </Button>{" "}
         </Row>
         <br />
         <Row>
@@ -88,12 +94,6 @@ const ViewWorkout = () => {
                   </Button>
                 </InputGroup.Append>
               </InputGroup>
-            </Row>
-            <br />
-            <Row>
-              <Button variant="success">
-                <Link to="/createworkouts">Add Workout</Link>
-              </Button>{" "}
             </Row>
           </Form>
         </Row>
