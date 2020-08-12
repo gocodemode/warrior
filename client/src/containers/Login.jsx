@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import UserContext from "../utils/StatusContext";
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -24,6 +25,7 @@ const Login = (props) => {
         console.log(err);
       });
     }
+
 
   return (
     <div>
@@ -51,8 +53,10 @@ const Login = (props) => {
                 setPassword(e.target.value);
               }} />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="success" type="submit">
+              <Link to="/viewworkouts">
               Submit
+              </Link>
             </Button>
           </Form>
         </Container>     
