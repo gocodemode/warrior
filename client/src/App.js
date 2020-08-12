@@ -9,7 +9,7 @@ import Modal from "./containers/Modal";
 import ViewWorkouts from "./containers/ViewWorkouts";
 import UpdateWorkout from "./containers/UpdateWorkout";
 import UpdateAccount from "./containers/UpdateAccount";
-import CreateWorkout from "./containers/CreateWorkout";
+import CreateWorkout from "./containers/CreateWorkout/CreateWorkout";
 import Contents from "./containers/Contents";
 import MyAccount from "./containers/MyAccount";
 import 'bootstrap/dist/css/bootstrap.min.css';

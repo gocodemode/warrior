@@ -1,21 +1,24 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Button from 'react-bootstrap/Button';
+import { Container, ListGroup, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const MyAccount = () => {
   return (
     <div>
         <Container>
-            <p>First:</p>
-            <br />
-            <p>Last:</p>
-            <br />
-            <p>Email:</p>
-            <br />
+            <ListGroup>
+                <p>First:</p>
+                <ListGroup.Item>Bobby</ListGroup.Item>
+                <br />
+                <p>Last:</p>
+                <ListGroup.Item>Schwarz</ListGroup.Item>
+                <br />
+                <p>Email:</p>
+                <ListGroup.Item>bob@warrior.com</ListGroup.Item>
+                <br />
+            </ListGroup>
             <Row>
-            <Button variant="success" type="submit">
+            <Button variant="warning" type="submit">
               <Link to="/updateaccount">
                 Update Account
               </Link>

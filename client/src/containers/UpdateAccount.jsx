@@ -15,7 +15,7 @@ const UpdateAccount = () => {
                 <p>Email:</p>
                 <br />
                 <Row>
-                    <Button variant="success" type="submit">
+                    <Button variant="warning" type="submit">
                     <Link to="/myaccount">
                         Save
                     </Link>

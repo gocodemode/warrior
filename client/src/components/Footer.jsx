@@ -6,6 +6,7 @@ const styles = {
   footer: {
     position: "fixed",
     left: 0,
+    marginTop: "3em",
     bottom: 0,
     width: "100%",
     backgroundColor: "#E5E5E5",
@@ -13,24 +14,28 @@ const styles = {
   },
   alignRight: { textAlign: "right" },
   alignLeft: { textAlign: "left" },
+  brim : {
+    marginTop: "3em",
+  }
 };
 
 const Footer = () => {
   return (
     <div>
-      <footer style={styles.footer}>
-        <Container>
-          <Row>
-            <Col>
-              <p>Copyright © KGB-C </p>
-            </Col>
-
-            <Col style={styles.alignRight}>
-              <Link to="/login">Instructor ?</Link>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      <div style={styles.brim}>
+        <Footer style={styles.footer}>
+          <Container>
+            <Row>
+              <Col>
+                <p>Copyright © KGB-C </p>
+              </Col>
+              <Col style={styles.alignRight}>
+                <Link to="/login">Instructor ?</Link>
+              </Col>
+            </Row>
+          </Container>
+        </Footer>
+      </div>
     </div>
   );
 };

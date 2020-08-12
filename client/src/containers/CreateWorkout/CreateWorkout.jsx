@@ -1,12 +1,12 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+import { Form, Container, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 const styles = {
     container: {
         marginTop: 25,
+        border: "10px solid #df6d3e",
+        backgroundColor: "#dfab9e"
     },
 };
 
@@ -32,7 +32,7 @@ const CreateWorkout = () => {
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
-                        <Button variant="success">
+                        <Button variant="warning">
                             <Link to="/viewworkouts">
                             Create
                             </Link>
