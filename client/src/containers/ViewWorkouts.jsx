@@ -53,7 +53,7 @@ class ViewWorkouts extends Component {
                     description={filteredworkout.description}
                     key={filteredworkout.id}
                     location={filteredworkout.location}
-                    date={filteredworkout.DaysArray}
+                  
                   />
                 ))}
               </Row>
