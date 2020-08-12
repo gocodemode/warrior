@@ -13,7 +13,7 @@ const ViewWorkout = () => {
       <Container>
         <Row>
           <h1>My Workouts</h1>
-              <Button variant="success">
+              <Button variant="success" class="fromtop">
                 <Link to="/createworkout">Add Workout</Link>
               </Button>{" "}
               <Button variant="success">
@@ -90,7 +90,7 @@ const ViewWorkout = () => {
                   <Button variant="outline-secondary">
                   <Link to="/updateworkout">
                         <i class="fas fa-edit"></i>
-                    </Link>
+                  </Link>
                   </Button>
                 </InputGroup.Append>
               </InputGroup>
