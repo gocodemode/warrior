@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // const WorkoutsController = require("./controllers/workoutsController");
+const AuthController = require("./controllers/authController");
  
 app.use(express.urlencoded({ 
     extended: true, 
@@ -31,6 +32,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(routes);
+app.use(AuthController);
 // app.use(WorkoutsController);
 // app.use(InstructorController);
  
@@ -49,7 +51,7 @@ mongoose
     .catch((err) => {
     console.log("Unable to connect to database.");
     console.log(err);
-    })
+    });
  
 app.listen(PORT, function() {
   console.log(`Express server is running on http://localhost:${PORT}!`);
