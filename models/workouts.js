@@ -5,13 +5,13 @@ const workoutsSchema = new Schema({
   name : { type : String, required : true },
   description : { type : String, required : true },
   location : { type : String, required : true },
-  Sunday : { type : Boolean, default : false },
-  Monday : { type : Boolean, default : false },
-  Tuesday : { type : Boolean, default : false },
-  Wednesday : { type : Boolean, default : false },
-  Thursday : { type : Boolean, default : false },
-  Friday : { type : Boolean, default : false },
-  Saturday : { type : Boolean, default : false },
+  Sunday : { type : Boolean},
+  Monday : { type : Boolean },
+  Tuesday : { type : Boolean },
+  Wednesday : { type : Boolean },
+  Thursday : { type : Boolean },
+  Friday : { type : Boolean },
+  Saturday : { type : Boolean },
 });
 
 const Workouts = mongoose.model("Workouts", workoutsSchema);

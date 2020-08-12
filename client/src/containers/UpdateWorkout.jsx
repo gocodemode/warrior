@@ -2,6 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 const styles = {
     container: {
@@ -16,6 +17,7 @@ const UpdateWorkout = () => {
                 <Form>
                     <Form.Group>
                         <Form.Label>Name</Form.Label>
+                        {/* Have Name, Location of Workout and Checked Boxes be updated when sent to Update Workout Page */}
                         <Form.Control type="text" placeholder="Name of Event" />
                         <br /> 
                         <Form.Label>Location</Form.Label>
@@ -30,7 +32,11 @@ const UpdateWorkout = () => {
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
-                        <Button variant="success">Update</Button>{' '}      
+                        <Button variant="success">
+                            <Link to="/viewworkouts">
+                            Update
+                            </Link>
+                        </Button>{' '}      
                     </Form.Group>
                 </Form>
             </Container>

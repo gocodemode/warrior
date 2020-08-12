@@ -11,7 +11,9 @@ const styles = {
   },
 };
 class Home extends Component {
+  
   render() {
+    window.Appcues.identify("firstName")
     return (
       <div>
         {/* <Container > */}
