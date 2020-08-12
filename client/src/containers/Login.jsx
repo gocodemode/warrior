@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -18,7 +18,9 @@ const Login = () => {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <Button variant="primary" type="submit">
+              <Link to="/viewworkouts">
               Submit
+              </Link>
             </Button>
           </Form>
         </Container>     

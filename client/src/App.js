@@ -13,6 +13,7 @@ import Contents from "./containers/Contents";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer";
 import Navbar from "./components/Nav";
+import "./App.css";
 
 
 function App() {
