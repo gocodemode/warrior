@@ -30,9 +30,7 @@ const UpdateWorkout = () => {
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
-                        <Button variant="success">
-                            Update
-                        </Button>{' '}      
+                        <Button variant="success">Update</Button>{' '}      
                     </Form.Group>
                 </Form>
             </Container>
