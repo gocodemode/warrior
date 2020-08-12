@@ -23,10 +23,7 @@ class Home extends Component {
           style={styles.image}
           alt="woman-doing-yoga"
         />
-        <div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum..</p>
-  </div>
+        
 
         {/* </Container> */}
       </div>
