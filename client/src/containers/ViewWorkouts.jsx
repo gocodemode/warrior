@@ -1,26 +1,27 @@
 import React, { Component } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import  { Container, Row, Button, Form, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import workoutdata from "../components/workoutdata.json";
 import Workout from "../components/Workout";
-// import axios from "axios";
 import API from "../utils/workouts";
 
 const styles = {
   center: {
     width: "500px",
-    margin: "0 auto"  
+    margin: "0 auto",  
   },
-  centertext: {
+  centerText: {
     textAlign: "center"
-  }
+  },
+  Row:{
+    maxWidth: "100%"
+  },
+  Button: {
+    margin: "0 3px"
+  },
 }
 
 class ViewWorkouts extends Component {
+  
   state = {
     workoutdata : []
   };
@@ -42,29 +43,27 @@ class ViewWorkouts extends Component {
 
   render() {
     return (
-      <div>
+      <div>          
         <Container style={styles.center}>
-          <Row style={styles.centertext}>
+          <Row style={styles.centerText}>
             <h1 >My Workouts</h1>
             </Row>
             <Row>
             <Col>
-            <Button variant="success" className="fromtop">
+            <Button variant="success" style={styles.Button}>
               <Link to="/createworkout">Add Workout</Link>
             </Button>{" "}
             </Col>
             <Col>
-            <Button variant="success">
+            <Button variant="success" style={styles.Button}>
               <Link to="/myaccount">View My Profile</Link>
             </Button>{" "}
             </Col>
             <Col></Col>
           </Row>
           <br />
-          <Row>
+          <Row style={styles.Row}>
             <Form>
-              {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-
               <Row>
                 <Col>
                 {this.state.workoutdata.map((filteredworkout) => (
@@ -73,9 +72,7 @@ class ViewWorkouts extends Component {
                     description={filteredworkout.description}
                     id={filteredworkout._id}
                     location={filteredworkout.location}
-                    days={filteredworkout.daysArray}
-              
-                    
+                    days={filteredworkout.daysArray}     
                   />
                 ))}
                 </Col>
