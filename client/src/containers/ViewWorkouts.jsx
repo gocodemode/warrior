@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import InputGroup from "react-bootstrap/InputGroup";
-import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
@@ -8,22 +6,27 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import workoutdata from "../components/workoutdata.json";
 import Workout from "../components/Workout";
+// import axios from "axios";
+import API from "../utils/workouts";
 
 class ViewWorkouts extends Component {
   state = {
-    workoutdata,
+    workoutdata
   };
-  componentDidMount() {
-    // loadWorkouts();
-  }
-  // Loads all books and sets them to books
-  // function loadWorkouts() {
+  // componentDidMount() {
+  //   this.loadWorkouts();
+  // }
+  // // Loads all books and sets them to books
+  // loadWorkouts = () => {
   //   API.getWorkouts()
-  //     .then(res =>
-  //       setWorkouts(res.data)
-  //     )
+  //     .then(res => {
+  //       console.log(res.data);
+  //       this.setState({workoutdata: res.data});
+        
+  //     }) 
   //     .catch(err => console.log(err));
-  //     };
+  // };
+
   render() {
     return (
       <div>
@@ -40,12 +43,8 @@ class ViewWorkouts extends Component {
           <br />
           <Row>
             <Form>
-             
-                {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-              
-              
-            
-           
+              {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
+
               <Row>
                 {this.state.workoutdata.map((filteredworkout) => (
                   <Workout
@@ -53,7 +52,7 @@ class ViewWorkouts extends Component {
                     description={filteredworkout.description}
                     key={filteredworkout.id}
                     location={filteredworkout.location}
-                  
+                    days={filteredworkout.DaysArray}
                   />
                 ))}
               </Row>

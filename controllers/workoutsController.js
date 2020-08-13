@@ -7,7 +7,56 @@ module.exports = {
     db.Workouts
       .find(req.query)
       .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {
+
+        const returnedData = {...dbModel}
+        returnedData.DaysArray = [];
+        
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Sunday,
+            "name": "Sunday"
+          }
+        })
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Monday,
+            "name": "Monday"
+          }
+        })
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Tuesday,
+            "name": "Tuesday"
+          }
+        })
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Wednesday,
+            "name": "Wednesday"
+          }
+        })
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Thursday,
+            "name": "Thursday"
+          }
+        })
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Friday,
+            "name": "Friday"
+          }
+        })
+        returnedData.DaysArray.push({
+          value:{
+            "isActive": dbModel.Saturday,
+            "name": "Saturday"
+          }
+        })
+
+        res.json(dbModel)
+      })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
