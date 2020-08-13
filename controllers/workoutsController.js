@@ -1,4 +1,3 @@
-
 const express = require("express");
 const db = require("../models");
 
@@ -37,3 +36,4 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
+

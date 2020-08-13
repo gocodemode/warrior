@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 const styles = {
     container: {
         marginTop: 25,
+        border: "10px solid #df6d3e",
+        backgroundColor: "#dfab9e"
     },
 };
 
@@ -21,6 +23,9 @@ const UpdateWorkout = () => {
                         <Form.Control type="text" placeholder="Name of Event" />
                         <br /> 
                         <Form.Label>Location</Form.Label>
+                        <Form.Control type="text" placeholder="Where will the session be?" />
+                        <br />
+                        <Form.Label>Description</Form.Label>
                         <Form.Control type="text" placeholder="Where will the session be?" />
                         <br />
                         <Form.Label>Date</Form.Label>

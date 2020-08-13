@@ -3,23 +3,28 @@ import React, { Component } from "react";
 // import "./Home.css";
 
 const styles = {
-    image: {
-        display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "50%"
-    }
-}
+  image: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    width: "50%",
+  },
+};
 class Home extends Component {
+  
   render() {
+    window.Appcues.identify("firstName")
     return (
-      <div  >
+      <div>
         {/* <Container > */}
+
+        <img
+          src="/images/yoga.png"
+          style={styles.image}
+          alt="woman-doing-yoga"
+        />
         
-              
-            
-            <img src="/images/yoga.png" style={styles.image} alt="woman-doing-yoga" />
-         
+
         {/* </Container> */}
       </div>
     );

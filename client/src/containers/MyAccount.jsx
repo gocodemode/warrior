@@ -2,10 +2,19 @@ import React from "react";
 import { Container, ListGroup, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
+const styles = {
+  container: {
+      marginTop: 25,
+      border: "10px solid #df6d3e",
+      backgroundColor: "#dfab9e"
+  },
+};
+
 const MyAccount = () => {
   return (
     <div>
-        <Container>
+        <Container style={styles.container}>
             <ListGroup>
                 <p>First:</p>
                 <ListGroup.Item>Bobby</ListGroup.Item>
@@ -32,6 +41,7 @@ const MyAccount = () => {
                 </Link>
             </Button>
             </Row>
+            <br />
         </Container>
     </div>
   );
