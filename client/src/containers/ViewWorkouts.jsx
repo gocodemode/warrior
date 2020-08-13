@@ -38,6 +38,12 @@ class ViewWorkouts extends Component {
       .catch(err => console.log(err));
   };
 
+  deleteWorkout = (id) => {
+    API.deleteWorkout(id)
+      .then(res => this.loadWorkouts())
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <div>
