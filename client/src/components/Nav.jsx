@@ -23,8 +23,8 @@ class Nav extends Component {
           </Navbar.Brand>
           </Col>
           <Col style={styles.alignRight}>
-              <Link to="/login">Instructor Login</Link>
-            </Col>
+            <Link to="/contents">Workouts</Link>
+          </Col>
         </Navbar>
       </div>
     );

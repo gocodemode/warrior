@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const styles = {
   footer: {
@@ -12,6 +13,9 @@ const styles = {
     color: "#f29c13",
     marginTop: "auto",
   },
+  alignRight: { 
+    textAlign: "right" 
+  },
 };
 
 const Footer = () => {
@@ -23,6 +27,9 @@ const Footer = () => {
             <Col>
               &copy;{new Date().getFullYear()} KGB-C | All Rights Reserved
             </Col>
+            <Col style={styles.alignRight}>
+            <Link to="/login">Instructor Login</Link>
+          </Col>
           </Row>
         </Container>
       </footer>
