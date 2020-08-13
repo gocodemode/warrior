@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import "./style.css";
 
 
-const WorkoutCard = () => {
+const WorkoutCard = (props) => {
   return (
     <Col sm={4}>
     <Card id="workoutCard" style={{ width: "18rem" }} style={{margin: "5px"}}>
