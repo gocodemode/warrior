@@ -5,13 +5,18 @@
     "description": "Yoga in the park",
     "location": "atlanta",
     "DaysArray": [
-      { "Sunday": true },
-      { "Monday": true },
-      { "Tuesday": true },
-      { "Wednesday": true },
-      { "Thursday": true },
-      { "Friday": true },
-      { "Saturday": true }
+      {
+        "value": {
+          "isActive": true,
+          "name": "Sunday"
+        }
+      },
+      {
+        "value": {
+          "isActive": true,
+          "name": "Monday"
+        }
+      }
     ]
   },
   {
@@ -20,13 +25,6 @@
     "description": "Central Park",
     "location": "Savannah",
     "DaysArray": [
-        { "Sunday": true },
-        { "Monday": true },
-        { "Tuesday": true },
-        { "Wednesday": true },
-        { "Thursday": true },
-        { "Friday": true },
-        { "Saturday": true }
-      ]
-    }
+    ]
+  }
 ]
