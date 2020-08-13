@@ -10,7 +10,7 @@ import ViewWorkouts from "./containers/ViewWorkouts";
 import UpdateWorkout from "./containers/UpdateWorkout";
 import UpdateAccount from "./containers/UpdateAccount";
 import CreateWorkout from "./containers/CreateWorkout";
-import Contents from "./containers/Contents";
+import Contents from "./containers/ContentPage/Contents";
 import MyAccount from "./containers/MyAccount";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Nav";
