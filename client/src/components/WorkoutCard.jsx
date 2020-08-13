@@ -5,9 +5,9 @@ import Col from "react-bootstrap/Col";
 
 const WorkoutCard = () => {
   return (
-    <Col sm={3}>
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Col sm={4}>
+    <Card style={{ width: "18rem" }} style={{margin: "5px"}}>
+      <Card.Img variant="top" src="/Images/yogaonroof.jpg" />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>

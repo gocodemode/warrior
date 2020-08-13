@@ -9,7 +9,7 @@ import WorkoutCard from "../../components/WorkoutCard";
 
 const Contents = () => {
   return (
-    <Container>
+    <Container id="contents">
       <Row id="filterRow">
         <Col sm={2} id="filterCol">
           <DropdownButton
@@ -17,20 +17,20 @@ const Contents = () => {
             title="Filter Workout By City"
             id="dropdown-menu-align-right"
           >
-            <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+            <Dropdown.Item eventKey="1">Atlanta</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+            <Dropdown.Item eventKey="2">Augusta</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
+            <Dropdown.Item eventKey="3">Columbus</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+            <Dropdown.Item eventKey="4">Savannah</Dropdown.Item>
           </DropdownButton>
         </Col>
         </Row>
         <Row>
-       <WorkoutCard />
-       <WorkoutCard />
-       <WorkoutCard />
+       <WorkoutCard class="cards" />
+       <WorkoutCard class="cards" />
+       <WorkoutCard class="cards" />
       </Row>
     </Container>
   );
