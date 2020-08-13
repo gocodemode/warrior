@@ -11,10 +11,7 @@ const styles = {
     backgroundColor: "#000",
     color: "#f29c13",
     marginTop: "auto",
-
   },
-
-  alignLeft: { textAlign: "left" },
 };
 
 const Footer = () => {

@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
+import { Form, Button, Container } from 'react-bootstrap';
 import UserContext from "../utils/StatusContext";
 import { Link } from "react-router-dom";
 

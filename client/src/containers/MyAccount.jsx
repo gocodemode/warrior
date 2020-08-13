@@ -16,30 +16,30 @@ const MyAccount = () => {
     <div>
         <Container style={styles.container}>
             <ListGroup>
-                <p>First:</p>
-                <ListGroup.Item>Bobby</ListGroup.Item>
-                <br />
-                <p>Last:</p>
-                <ListGroup.Item>Schwarz</ListGroup.Item>
-                <br />
-                <p>Email:</p>
-                <ListGroup.Item>bob@warrior.com</ListGroup.Item>
-                <br />
+              <p>First:</p>
+              <ListGroup.Item>Bobby</ListGroup.Item>
+              <br />
+              <p>Last:</p>
+              <ListGroup.Item>Schwarz</ListGroup.Item>
+              <br />
+              <p>Email:</p>
+              <ListGroup.Item>bob@warrior.com</ListGroup.Item>
+              <br />
             </ListGroup>
             <Row>
-            <Button variant="warning" type="submit">
-              <Link to="/updateaccount">
-                Update Account
-              </Link>
-            </Button>
-            <Button variant="danger" type="submit">
-                Delete Account
-            </Button>
-            <Button variant="warning" type="submit">
-                <Link to="/viewworkouts">
-                    My Workouts
+              <Button variant="warning" type="submit">
+                <Link to="/updateaccount">
+                  Update Account
                 </Link>
-            </Button>
+              </Button>
+              <Button variant="danger" type="submit">
+                  Delete Account
+              </Button>
+              <Button variant="warning" type="submit">
+                  <Link to="/viewworkouts">
+                      My Workouts
+                  </Link>
+              </Button>
             </Row>
             <br />
         </Container>

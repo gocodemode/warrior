@@ -1,29 +1,24 @@
 import React, { Component } from "react";
 import  { Container, Row, Button, Form, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import workoutdata from "../components/workoutdata.json";
 import Workout from "../components/Workout";
-// import axios from "axios";
 import API from "../utils/workouts";
 
 const styles = {
   center: {
     width: "500px",
-    margin: "0 auto"  
+    margin: "0 auto",  
   },
-  centertext: {
+  centerText: {
     textAlign: "center"
-  }
-}
-
-const styles = {
+  },
   Row:{
-    maxWidth: "100%",
+    maxWidth: "100%"
   },
   Button: {
     margin: "0 3px"
-  }
-};
+  },
+}
 
 class ViewWorkouts extends Component {
   
@@ -48,7 +43,7 @@ class ViewWorkouts extends Component {
     return (
       <div>          
         <Container style={styles.center}>
-          <Row>
+          <Row style={styles.centerText}>
             <h1 >My Workouts</h1>
             </Row>
             <Row>
@@ -67,8 +62,6 @@ class ViewWorkouts extends Component {
           <br />
           <Row style={styles.Row}>
             <Form>
-              {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
-
               <Row>
                 <Col>
                 {this.state.workoutdata.map((filteredworkout) => (

@@ -1,29 +1,19 @@
 import React from "react";
-<<<<<<< HEAD
 import { InputGroup, ListGroup, Button, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const styles = {
   ListGroupItem: {
-    width: "24em",
+    width: "36em",
   }
 }
-=======
-import InputGroup from "react-bootstrap/InputGroup";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-import { Link } from "react-router-dom";
-// import { Form } from "react-bootstrap";
->>>>>>> 27f0252119ced84ef637ce3657fcb539a2be60e6
 
 const Workout = (props) => {
   return (
     <div>
       <Row>
         <InputGroup>
-          <ListGroup>
+          <ListGroup style={styles.ListGroupItem}>
             {props.days.map((day) => {
               if (day.value.isActive) {
                 return (
@@ -33,25 +23,22 @@ const Workout = (props) => {
                     {props.description} on this day: {day.value.name}
                   </ListGroup.Item>
                   <InputGroup.Append>
-                  <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times" ></i>
-                  </Button>
-                  <Button variant="outline-secondary">
-                    <Link to="/updateworkout">
-                      <i class="fas fa-edit"></i>
-                    </Link>
-                  </Button>
-                </InputGroup.Append>
-                </>
+                    <Button variant="outline-secondary">
+                      <i class="fas fa-calendar-times" ></i>
+                    </Button>
+                    <Button variant="outline-secondary">
+                      <Link to="/updateworkout">
+                        <i class="fas fa-edit"></i>
+                      </Link>
+                    </Button>
+                  </InputGroup.Append>
+                  </>
                 );
               }
             })}
-          </ListGroup>
-          
+          </ListGroup> 
         </InputGroup>
       </Row>
-
-      
     </div>
   );
 };

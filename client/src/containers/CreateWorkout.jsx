@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
+import { Form, Container, Button } from "react-bootstrap";
 import API from "../../src/utils/workouts";
 import { Link } from "react-router-dom";
 
@@ -58,7 +56,7 @@ const CreateWorkout = () => {
           { value: { isActive: formObject.Sunday, name: "Sunday" } },
           { value: { isActive: formObject.Monday, name: "Monday" } },
           { value: { isActive: formObject.Tuesday, name: "Tuesday" } },
-          { value: { isActive: formObject.Wednesday, name: "Wedneday" } },
+          { value: { isActive: formObject.Wednesday, name: "Wednesday" } },
           { value: { isActive: formObject.Thursday, name: "Thursday" } },
           { value: { isActive: formObject.Friday, name: "Friday" } },
           { value: { isActive: formObject.Saturday, name: "Saturday" } }
@@ -103,7 +101,7 @@ const CreateWorkout = () => {
               type="text"
               onChange={handleInputChange}
               placeholder="Location"
-              name="Location of Event"
+              name="location"
               value={formObject.location}
             />
             <br />
@@ -172,9 +170,9 @@ const CreateWorkout = () => {
               // disabled={!(formObject.name && formObject.description)}
               onClick={handleFormSubmit}
             >
-                <Link to="/viewworkouts">
-                    Create
-                </Link>
+              <Link to="/viewworkouts">
+                  Create
+              </Link>
             </Button>{" "}
           </Form.Group>
         </Form>
