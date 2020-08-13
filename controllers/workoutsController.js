@@ -9,51 +9,51 @@ module.exports = {
       .sort({ date: -1 })
       .then(dbModel => {
 
-        const returnedData = {...dbModel}
-        returnedData.DaysArray = [];
+        // const returnedData = {...dbModel}
+        // returnedData.DaysArray = [];
         
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Sunday,
-            "name": "Sunday"
-          }
-        })
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Monday,
-            "name": "Monday"
-          }
-        })
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Tuesday,
-            "name": "Tuesday"
-          }
-        })
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Wednesday,
-            "name": "Wednesday"
-          }
-        })
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Thursday,
-            "name": "Thursday"
-          }
-        })
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Friday,
-            "name": "Friday"
-          }
-        })
-        returnedData.DaysArray.push({
-          value:{
-            "isActive": dbModel.Saturday,
-            "name": "Saturday"
-          }
-        })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Sunday,
+        //     "name": "Sunday"
+        //   }
+        // })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Monday,
+        //     "name": "Monday"
+        //   }
+        // })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Tuesday,
+        //     "name": "Tuesday"
+        //   }
+        // })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Wednesday,
+        //     "name": "Wednesday"
+        //   }
+        // })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Thursday,
+        //     "name": "Thursday"
+        //   }
+        // })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Friday,
+        //     "name": "Friday"
+        //   }
+        // })
+        // returnedData.DaysArray.push({
+        //   value:{
+        //     "isActive": dbModel.Saturday,
+        //     "name": "Saturday"
+        //   }
+        // })
 
         res.json(dbModel)
       })
