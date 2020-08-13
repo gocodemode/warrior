@@ -28,15 +28,9 @@ const Contents = () => {
         </Col>
         </Row>
         <Row>
-        <Col sm={3}>
-          <WorkoutCard />
-          </Col>
-          <Col sm={3}>
-            <WorkoutCard />
-          </Col>
-          <Col sm={3}>
-          <WorkoutCard />
-        </Col>
+       <WorkoutCard />
+       <WorkoutCard />
+       <WorkoutCard />
       </Row>
     </Container>
   );
