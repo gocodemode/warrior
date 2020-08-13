@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Hatha Yoga",
+    "description": "Yoga in the park",
+    "location": "atlanta",
+    "DaysArray": [
+      { "Sunday": true },
+      { "Monday": true },
+      { "Tuesday": true },
+      { "Wednesday": true },
+      { "Thursday": true },
+      { "Friday": true },
+      { "Saturday": true }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Brikham Yoga",
+    "description": "Central Park",
+    "location": "Savannah",
+    "DaysArray": [
+        { "Sunday": true },
+        { "Monday": true },
+        { "Tuesday": true },
+        { "Wednesday": true },
+        { "Thursday": true },
+        { "Friday": true },
+        { "Saturday": true }
+      ]
+    }
+]
