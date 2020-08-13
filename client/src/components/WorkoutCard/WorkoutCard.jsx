@@ -8,7 +8,7 @@ import "./style.css";
 const WorkoutCard = (props) => {
   return (
     <Col sm={4}>
-    <Card id="workoutCard" style={{ width: "18rem" }} style={{margin: "5px"}}>
+    <Card className= "grow" id="workoutCard" style={{ width: "18rem" }} style={{margin: "15px"}}>
       <Card.Img id="cardImage" variant="top" src="/Images/yogaonroof.jpg" />
       <Card.Body>
         <Card.Title id="title">Yoga on the Roof</Card.Title>
