@@ -1,0 +1,19 @@
+#serenity {
+    background-image: url(/images/yoga.png);
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: 675px 650px;
+}
+
+h5 {
+    color: white;
+}
+
+#suave {
+    margin-top: 150px;
+    margin-left: 40px;
+}
+
+#white {
+    color: white;
+}

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./containers/Home";
+import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch";
 import Login from "./containers/Login";
 import Modal from "./containers/Modal";
