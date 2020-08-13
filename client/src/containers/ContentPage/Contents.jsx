@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import "./style.css";
-import WorkoutCard from "../../components/WorkoutCard";
+import WorkoutCard from "../../components/WorkoutCard/WorkoutCard";
 
 const Contents = () => {
   return (
@@ -28,6 +28,9 @@ const Contents = () => {
         </Col>
         </Row>
         <Row>
+       <WorkoutCard class="cards" />
+       <WorkoutCard class="cards" />
+       <WorkoutCard class="cards" />
        <WorkoutCard class="cards" />
        <WorkoutCard class="cards" />
        <WorkoutCard class="cards" />
