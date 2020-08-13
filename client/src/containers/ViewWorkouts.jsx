@@ -6,8 +6,24 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import API from "../utils/API";
 
 const ViewWorkout = () => {
+const [workouts, setWorkouts] = useState([]);
+
+  useEffect(() => {
+    loadWorkouts()
+  }, [])
+
+  // Loads all workouts and sets them to workouts
+  function loadWorkouts() {
+    API.getWorkouts()
+      .then(res => 
+        setWorkouts(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
   return (
     <div>
       <Container>
@@ -26,6 +42,17 @@ const ViewWorkout = () => {
             <Row>
                 {/* Having the List Group Item within the Input Group might not work, but it's better than placeholder text in FormControl. Refer to Input Group and List Group on React Bootstrap */}
               <InputGroup>
+              <Listgroup>
+                {workouts.map(workout => (
+                  <ListItem key={workout._id}>
+                    <Link to={"/workouts/" + workout._id}>
+                      <strong>
+                        {workout.name} by {book.description}
+                      </strong>
+                    </Link>
+                  </Listgroup>
+                ))}
+              </List>
                 <ListGroup>
                   <ListGroup.Item>Yoga in Atlanta on Monday 7 PM</ListGroup.Item>
                 </ListGroup>

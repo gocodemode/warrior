@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -30,7 +30,7 @@ const CreateWorkout = () => {
     loadWorkouts();
   }, []);
 
-  // Loads all workouts and sets them to workouts
+//   // Loads all workouts and sets them to workouts
   const loadWorkouts = () => {
     API.getWorkouts()
       .then((res) => setWorkouts(res.data))
@@ -170,6 +170,7 @@ const CreateWorkout = () => {
             >
               Create
             </Button>{" "}
+            
           </Form.Group>
         </Form>
       </Container>
