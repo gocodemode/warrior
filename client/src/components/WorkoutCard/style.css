@@ -1,0 +1,24 @@
+#workoutCard {
+    border-radius: 20px;
+    border: 5px solid #DE6D40;
+    padding: 10px;
+    /* width: 200px;
+    height: 150px; */
+    margin-bottom: 15px;
+}
+
+#cardImage {
+    border-radius: 20px;
+}
+
+#title {
+    text-align: center;
+}
+
+#cardText {
+    text-align: center;
+}
+
+#button {
+   /* text: center; */
+}
