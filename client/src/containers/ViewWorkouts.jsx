@@ -38,6 +38,8 @@ class ViewWorkouts extends Component {
       .catch(err => console.log(err));
   };
 
+  
+
   render() {
     return (
       <div>
@@ -69,9 +71,11 @@ class ViewWorkouts extends Component {
                   <Workout
                     name={filteredworkout.name}
                     description={filteredworkout.description}
-                    key={filteredworkout.id}
+                    id={filteredworkout._id}
                     location={filteredworkout.location}
                     days={filteredworkout.daysArray}
+              
+                    
                   />
                 ))}
                 </Col>

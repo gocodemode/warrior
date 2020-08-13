@@ -6,8 +6,27 @@ import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 // import { Form } from "react-bootstrap";
+import API from "../utils/workouts"
+
 
 const Workout = (props) => {
+  console.log("On load", props);
+
+ const deleteWorkout = (id) => {
+   console.log("You clicked me.", props);
+    API.deleteWorkout(id)
+    .then(res => {
+      console.log(res.data);
+    })
+  }
+ const updateWorkout = (id) => {
+   console.log("You clicked me.", props);
+    API.updateWorkout(id)
+    .then(res => {
+      console.log(res.data);
+    })
+  }
+
   return (
     <div>
       <Row>
@@ -23,9 +42,15 @@ const Workout = (props) => {
                   </ListGroup.Item>
                   <InputGroup.Append>
                   <Button variant="outline-secondary">
-                    <i class="fas fa-calendar-times" ></i>
+                    <i class="fas fa-calendar-times" onClick={() => {
+                    deleteWorkout(props.id);
+                    
+                    }} ></i>
                   </Button>
-                  <Button variant="outline-secondary">
+                  <Button variant="outline-secondary" onClick={() => {
+                    updateWorkout(props.id);
+                    
+                    }}>
                     <Link to="/updateworkout">
                       <i class="fas fa-edit"></i>
                     </Link>
