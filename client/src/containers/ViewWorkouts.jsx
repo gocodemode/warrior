@@ -47,7 +47,7 @@ class ViewWorkouts extends Component {
             </Row>
             <Row>
             <Col>
-            <Button variant="success" class="fromtop">
+            <Button variant="success" className="fromtop">
               <Link to="/createworkout">Add Workout</Link>
             </Button>{" "}
             </Col>
