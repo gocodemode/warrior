@@ -15,7 +15,7 @@ const styles = {
 };
 
 const CreateWorkout = () => {
-  const [ workouts, setWorkouts ] = useState([]);
+  const [workout, setWorkouts] = useState();
   const [formObject, setFormObject] = useState({
     name: "",
     location: "",
@@ -54,13 +54,16 @@ const CreateWorkout = () => {
         name: formObject.name,
         location: formObject.location,
         description: formObject.description,
-        Sunday: formObject.Sunday,
-        Monday: formObject.Monday,
-        Tuesday: formObject.Tuesday,
-        Wednesday: formObject.Wednesday,
-        Thursday: formObject.Thursday,
-        Friday: formObject.Friday,
-        Saturday: formObject.Saturday,
+        daysArray: [
+          { value: { isActive: formObject.Sunday, name: "Sunday" } },
+          { value: { isActive: formObject.Monday, name: "Monday" } },
+          { value: { isActive: formObject.Tuesday, name: "Tuesday" } },
+          { value: { isActive: formObject.Wednesday, name: "Wedneday" } },
+          { value: { isActive: formObject.Thursday, name: "Thursday" } },
+          { value: { isActive: formObject.Friday, name: "Friday" } },
+          { value: { isActive: formObject.Saturday, name: "Saturday" } }
+        ],
+
       })
         .then(() =>
           setFormObject({
@@ -76,10 +79,10 @@ const CreateWorkout = () => {
   };
 
   const handleCheckboxChange = (e) => {
-      console.log(e.target.name);
-      console.log(e.target.checked);
-        setFormObject({...formObject, [e.target.name]: e.target.checked})
-  }
+    console.log(e.target.name);
+    console.log(e.target.checked);
+    setFormObject({ ...formObject, [e.target.name]: e.target.checked });
+  };
 
   return (
     <div>
