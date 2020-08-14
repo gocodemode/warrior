@@ -18,7 +18,7 @@ class Home extends Component {
                   <Col xs="4" id="suave">
                     <h5>Welcome to Warrior. Workout with a supportive community that always strives to B.E.S.A.F.E.</h5>
                     <Button variant="warning">
-                      <Link to="/viewworkouts" id="white">
+                      <Link to="/contents" id="white">
                         View Workouts
                       </Link>
                     </Button>{' '}

@@ -4,17 +4,17 @@ import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch";
-import Login from "./containers/Login";
+import Login from "./containers/Login/Login";
 import Modal from "./containers/Modal";
-import ViewWorkouts from "./containers/ViewWorkouts";
+import ViewWorkouts from "./containers/ViewWorkouts/ViewWorkouts";
 import UpdateWorkout from "./containers/UpdateWorkout";
 import UpdateAccount from "./containers/UpdateAccount";
 import CreateWorkout from "./containers/CreateWorkout";
 import Contents from "./containers/ContentPage/Contents";
-import MyAccount from "./containers/MyAccount";
+import MyAccount from "./containers/MyAccount/MyAccount";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Nav";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
