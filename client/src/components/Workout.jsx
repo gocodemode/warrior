@@ -1,12 +1,13 @@
 import React from "react";
-import InputGroup from "react-bootstrap/InputGroup";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
+import { InputGroup, ListGroup, Button, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import { Form } from "react-bootstrap";
 import API from "../utils/workouts"
+
+const styles = {
+  ListGroupItem: {
+    width: "36em",
+  }
+}
 
 
 const Workout = (props) => {
@@ -31,7 +32,7 @@ const Workout = (props) => {
     <div>
       <Row>
         <InputGroup>
-          <ListGroup>
+          <ListGroup style={styles.ListGroupItem}>
             {props.days.map((day) => {
               if (day.value.isActive) {
                 return (
@@ -60,12 +61,9 @@ const Workout = (props) => {
                 );
               }
             })}
-          </ListGroup>
-          
+          </ListGroup> 
         </InputGroup>
       </Row>
-
-      
     </div>
   );
 };
