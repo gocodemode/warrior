@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import API from "../utils/workouts";
 
 const styles = {
     container: {
@@ -13,6 +14,20 @@ const styles = {
 };
 
 const UpdateWorkout = () => {
+    const [id, setId] = useState("");
+    const [workoutdata, setWorkoutData] = useState();
+    const { match: { params } } = this.props;
+    useEffect(()=> {
+        setId(params.id)
+    })
+    
+    // API.getWorkout(id)
+    //   .then(res => {
+    //     console.log(res.data);
+    //     this.setState({workoutdata: res.data});
+    //   }) 
+    //   .catch(err => console.log(err));
+  
     return (
         <div>
            <Container style={styles.container}>
@@ -32,7 +47,7 @@ const UpdateWorkout = () => {
                             <Form.Check id="Sunday" label="Sunday" />
                             <Form.Check id="Monday" label="Monday" />
                             <Form.Check id="Tuesday" label="Tuesday" />
-                            <Form.Check id="Wednesday" label="Wednesday" />
+                            <Form.Check id="Wednes)day" label="Wednesday" />
                             <Form.Check id="Thursday" label="Thursday" />
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>

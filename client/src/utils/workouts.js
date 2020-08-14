@@ -17,7 +17,7 @@ export default {
   saveWorkout: function(workoutData) {
     return axios.post("/api/workouts", workoutData);
   },
-  updateWorkout: function(workoutData) {
-    return axios.put("/api/workouts", workoutData);
+  updateWorkout: function(workoutData,id) {
+    return axios.put(`/api/workouts/${id}`, workoutData);
   }
 };

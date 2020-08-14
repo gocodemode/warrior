@@ -22,9 +22,15 @@ const Workout = (props) => {
   }
  const updateWorkout = (workoutdata,id) => {
    console.log("You clicked me.", props);
+   console.log(id);
     API.updateWorkout(workoutdata,id)
     .then(res => {
-      console.log(res.data);
+      API.getWorkouts()
+      .then(res => {
+        console.log(res.data);
+        this.setState({workoutdata: res.data});
+      }) 
+      .catch(err => console.log(err));
     })
   }
 
@@ -48,11 +54,8 @@ const Workout = (props) => {
                     
                     }} ></i>
                   </Button>
-                  <Button variant="outline-secondary" onClick={() => {
-                    updateWorkout(props.id);
-                    
-                    }}>
-                    <Link to="/updateworkout">
+                  <Button variant="outline-secondary" >
+                    <Link to = {`/updateworkout/${props.id}`}>
                       <i class="fas fa-edit"></i>
                     </Link>
                   </Button>
