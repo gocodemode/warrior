@@ -1,15 +1,15 @@
 #serenity {
     background-image: url(/Images/yoga.png);
     width: 100%;
-    max-width: 100%;
+    /* max-width: 100%; */
     /* object-fit: cover; */
     height: 650px;
-    border: none;
-    margin: 0 auto;
-    padding: 5px 0;
-    display: inherit;
+    /* border: none; */
+    /* margin: 0 auto;
+    padding: 5px 0; */
+    /* display: block; */
     background-repeat: no-repeat;
-    /* background-size: 675px 650px; */
+    background-size: 675px 650px;
 }
 
 h5 {

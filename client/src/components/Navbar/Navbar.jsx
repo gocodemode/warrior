@@ -24,7 +24,7 @@ class Nav extends Component {
           </Navbar.Brand>
           </Col>
           <Col style={styles.alignRight}>
-            <Link to="/contents" id="white">Workouts</Link>
+            <Link to="/contents" id="orange">Workouts</Link>
           </Col>
         </Navbar>
       </div>

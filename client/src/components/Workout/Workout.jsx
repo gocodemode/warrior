@@ -1,7 +1,7 @@
 import React from "react";
 import { InputGroup, ListGroup, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import API from "../utils/workouts";
+import API from "../../utils/workouts";
 
 const styles = {
   ListGroupItem: {

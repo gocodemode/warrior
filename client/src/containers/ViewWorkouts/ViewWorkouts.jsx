@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import  { Container, Row, Button, Form, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Workout from "../../components/Workout";
+import Workout from "../../components/Workout/Workout";
 import API from "../../utils/workouts";
 
 const styles = {

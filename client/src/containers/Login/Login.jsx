@@ -12,7 +12,8 @@ const styles = {
       marginLeft: "auto",
       marginRight: "auto",
       border: "10px solid #df6d3e",
-      backgroundColor: "#df6d3e"
+      backgroundColor: "#df6d3e",
+      padding: 30,
   },
 };
 
