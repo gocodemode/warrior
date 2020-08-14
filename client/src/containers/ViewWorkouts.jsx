@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 // import workoutdata from "../components/workoutdata.json";
 import Workout from "../components/Workout";
 // import axios from "axios";
@@ -22,12 +23,16 @@ const styles = {
 
 class ViewWorkouts extends Component {
   state = {
-    workoutdata : []
+    workoutdata : [],
+    
+    
   };
+  
   componentDidMount() {
+    // let {id} = useParams();
     this.loadWorkouts();
   }
-  // Loads all books and sets them to books
+  // Loads all workouts and sets them to workoutdata
   loadWorkouts = () => {
     API.getWorkouts()
       .then(res => {

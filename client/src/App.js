@@ -41,7 +41,7 @@ function App() {
           <Route exact path="/myaccount" component={MyAccount}/>
           <Route exact path="/createworkout" component={CreateWorkout}/>
           <Route exact path="/viewworkouts" component={ViewWorkouts}/>
-          <Route exact path="/updateworkout" component={UpdateWorkout}/>
+          <Route exact path="/updateworkout/:id" component={UpdateWorkout}/>
           <Route exact path="/updateaccount" component={UpdateAccount}/>
           <Route exact path="/modal" component={Modal}/>
           <Route component={NoMatch}/>

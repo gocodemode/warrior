@@ -51,7 +51,7 @@ const Workout = (props) => {
                     updateWorkout(props.id);
                     
                     }}>
-                    <Link to="/updateworkout">
+                     <Link to = {`/updateworkout/${props.id}`}>
                       <i class="fas fa-edit"></i>
                     </Link>
                   </Button>
