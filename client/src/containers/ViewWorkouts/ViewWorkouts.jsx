@@ -1,24 +1,34 @@
 import React, { Component } from "react";
 import  { Container, Row, Button, Form, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Workout from "../components/Workout";
-import API from "../utils/workouts";
+import Workout from "../../components/Workout/Workout";
+import API from "../../utils/workouts";
 
 const styles = {
-  center: {
-    width: "500px",
-    margin: "0 auto",  
-  },
-  centerText: {
-    textAlign: "center"
-  },
+  // center: {
+  //   width: "500px",
+  //   margin: "0 auto",  
+  // },
   Row:{
-    maxWidth: "100%"
+    maxWidth: "100%",
+
+    // marginLeft: "35px"
+    padding: 20,
   },
   Button: {
     margin: "0 3px"
   },
-}
+  container: {
+      marginTop: 25,
+      border: "10px solid #df6d3e",
+      backgroundColor: "#dfab9e",
+      padding: 30,
+  },
+  h1: {
+    textAlign: "center"
+  }
+};
+
 
 class ViewWorkouts extends Component {
   
@@ -44,27 +54,27 @@ class ViewWorkouts extends Component {
   render() {
     return (
       <div>          
-        <Container style={styles.center}>
-          <Row style={styles.centerText}>
-            <h1 >My Workouts</h1>
-            </Row>
-            <Row>
-            <Col>
-            <Button variant="success" style={styles.Button}>
-              <Link to="/createworkout">Add Workout</Link>
-            </Button>{" "}
+        <Container style={styles.container}>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }} style={{ textAlign: "center"}}>
+              <h1>My Workouts</h1>
             </Col>
-            <Col>
-            <Button variant="success" style={styles.Button}>
-              <Link to="/myaccount">View My Profile</Link>
-            </Button>{" "}
+          </Row>
+          <hr />
+          <Row className="justify-content-md-center">
+            <Col md="auto">
+              <Button variant="success" style={styles.Button}>
+                <Link to="/createworkout" id="white">Add Workout</Link>
+              </Button>{" "}
+              <Button variant="info" style={styles.Button}>
+                <Link to="/myaccount" id="white">View My Profile</Link>
+              </Button>{" "}
             </Col>
-            <Col></Col>
           </Row>
           <br />
-          <Row style={styles.Row}>
+          <Row>
             <Form>
-              <Row>
+              <Row style={styles.Row} className=".d-sm-inline-flex">
                 <Col>
                 {this.state.workoutdata.map((filteredworkout) => (
                   <Workout
