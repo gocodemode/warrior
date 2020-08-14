@@ -54,7 +54,7 @@ const CreateWorkout = () => {
           { value: { isActive: formObject.Sunday, name: "Sunday" } },
           { value: { isActive: formObject.Monday, name: "Monday" } },
           { value: { isActive: formObject.Tuesday, name: "Tuesday" } },
-          { value: { isActive: formObject.Wednesday, name: "Wedneday" } },
+          { value: { isActive: formObject.Wednesday, name: "Wednesday" } },
           { value: { isActive: formObject.Thursday, name: "Thursday" } },
           { value: { isActive: formObject.Friday, name: "Friday" } },
           { value: { isActive: formObject.Saturday, name: "Saturday" } }

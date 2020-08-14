@@ -38,11 +38,7 @@ class ViewWorkouts extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteWorkout = (id) => {
-    API.deleteWorkout(id)
-      .then(res => this.loadWorkouts())
-      .catch(err => console.log(err));
-  };
+  
 
   render() {
     return (
@@ -75,9 +71,11 @@ class ViewWorkouts extends Component {
                   <Workout
                     name={filteredworkout.name}
                     description={filteredworkout.description}
-                    key={filteredworkout.id}
+                    id={filteredworkout._id}
                     location={filteredworkout.location}
                     days={filteredworkout.daysArray}
+              
+                    
                   />
                 ))}
                 </Col>

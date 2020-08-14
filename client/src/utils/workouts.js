@@ -18,6 +18,6 @@ export default {
     return axios.post("/api/workouts", workoutData);
   },
   updateWorkout: function(workoutData) {
-    return axios.update("/api/workouts", workoutData);
+    return axios.put("/api/workouts", workoutData);
   }
 };
