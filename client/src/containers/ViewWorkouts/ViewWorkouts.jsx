@@ -11,10 +11,10 @@ const styles = {
   // },
   Row:{
     maxWidth: "100%",
-    marginLeft: "45px",
-    marginBottom: "30px",
+
+    // marginLeft: "35px"
+    padding: 20,
   },
-  
   Button: {
     margin: "0 3px"
   },
@@ -22,7 +22,11 @@ const styles = {
       marginTop: 25,
       border: "10px solid #df6d3e",
       backgroundColor: "#dfab9e",
+      padding: 30,
   },
+  h1: {
+    textAlign: "center"
+  }
 };
 
 
@@ -51,8 +55,10 @@ class ViewWorkouts extends Component {
     return (
       <div>          
         <Container style={styles.container}>
-          <Row className="justify-content-md-center">
-            <h1 md="auto">My Workouts</h1>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }} style={{ textAlign: "center"}}>
+              <h1>My Workouts</h1>
+            </Col>
           </Row>
           <hr />
           <Row className="justify-content-md-center">
@@ -68,7 +74,7 @@ class ViewWorkouts extends Component {
           <br />
           <Row>
             <Form>
-              <Row style={styles.Row}>
+              <Row style={styles.Row} className=".d-sm-inline-flex">
                 <Col>
                 {this.state.workoutdata.map((filteredworkout) => (
                   <Workout

@@ -37,8 +37,8 @@ const UpdateWorkout = () => {
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
-                        <Button variant="warning">
-                            <Link to="/viewworkouts">
+                        <Button variant="success">
+                            <Link to="/viewworkouts" id="white">
                             Update
                             </Link>
                         </Button>{' '}      
