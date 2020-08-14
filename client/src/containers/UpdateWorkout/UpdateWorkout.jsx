@@ -6,11 +6,11 @@ import { Link, withRouter } from "react-router-dom";
 import API from "../utils/workouts";
 
 const styles = {
-  container: {
-    marginTop: 25,
-    border: "10px solid #df6d3e",
-    backgroundColor: "#dfab9e",
-  },
+    container: {
+        marginTop: 25,
+        border: "10px solid #df6d3e",
+        backgroundColor: "#dfab9e"
+    },
 };
 
 class UpdateWorkout extends Component {

@@ -1,22 +1,21 @@
-import React, {useEffect} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
-import NoMatch from "./containers/NoMatch";
-import Login from "./containers/Login";
+import NoMatch from "./containers/NoMatch/NoMatch";
+import Login from "./containers/Login/Login";
 import Modal from "./containers/Modal";
-import ViewWorkouts from "./containers/ViewWorkouts";
-import UpdateWorkout from "./containers/UpdateWorkout";
-import UpdateAccount from "./containers/UpdateAccount";
-import CreateWorkout from "./containers/CreateWorkout";
+import ViewWorkouts from "./containers/ViewWorkouts/ViewWorkouts";
+import UpdateWorkout from "./containers/UpdateWorkout/UpdateWorkout";
+import UpdateAccount from "./containers/UpdateAccount/UpdateAccount";
+import CreateWorkout from "./containers/CreateWorkout/CreateWorkout";
 import Contents from "./containers/ContentPage/Contents";
-import MyAccount from "./containers/MyAccount";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from "./components/Footer";
-import Navbar from "./components/Nav";
+import MyAccount from "./containers/MyAccount/MyAccount";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
-
 
 function App() {
   useEffect(() => {
@@ -31,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App page-container content">
       <Router>
         <Navbar />
         <Switch>
@@ -53,6 +52,3 @@ function App() {
 }
 
 export default App;
-
-
-

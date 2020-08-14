@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import API from "../../src/utils/workouts";
+import { Form, Container, Button } from "react-bootstrap";
+import API from "../../utils/workouts";
+import { Link } from "react-router-dom";
+import "./CreateWorkout.css";
+
 
 const styles = {
-  container: {
-    marginTop: 25,
-  },
+    container: {
+        marginTop: 25,
+        border: "10px solid #df6d3e",
+        backgroundColor: "#dfab9e",
+        padding: 20,
+    },
 };
 
 const CreateWorkout = () => {
@@ -91,14 +95,12 @@ const CreateWorkout = () => {
               placeholder="Name of Event"
               onChange={handleInputChange}
               name="name"
-              placeholder="Name"
               value={formObject.name}
             />
             <br />
             <Form.Label>Location</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Where will the session be?"
               onChange={handleInputChange}
               placeholder="Location"
               name="location"
@@ -108,7 +110,6 @@ const CreateWorkout = () => {
             <Form.Label>Description</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Where will the session be?"
               onChange={handleInputChange}
               placeholder="Description"
               name="description"
@@ -171,7 +172,9 @@ const CreateWorkout = () => {
               // disabled={!(formObject.name && formObject.description)}
               onClick={handleFormSubmit}
             >
-              Create
+              <Link to="/viewworkouts" id="white">
+                  Create
+              </Link>
             </Button>{" "}
           </Form.Group>
         </Form>
