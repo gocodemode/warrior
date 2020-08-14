@@ -1,31 +1,33 @@
 import React, { Component } from "react";
-// import { Container } from "react-bootstrap";
 import "./Home.css";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const styles = {
-  image: {
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "50%",
-  },
-};
+
+
 class Home extends Component {
-  
   render() {
-    window.Appcues.identify("firstName")
+    window.Appcues.identify("firstName");
     return (
       <div>
-        {/* <Container > */}
-
-        <img
-          src="/images/yoga.png"
-          style={styles.image}
-          alt="woman-doing-yoga"
-        />
-        
-
-        {/* </Container> */}
+        <Container>
+          <Row>
+            <Col xs={{ span: 8, offset: 2 }}> 
+              <div id="serenity">
+                <Row>
+                  <Col xs="4" id="suave">
+                    <h5>Welcome to Warrior. Workout with a supportive community that always strives to B.E.S.A.F.E.</h5>
+                    <Button variant="warning">
+                      <Link to="/contents" id="white">
+                        View Workouts
+                      </Link>
+                    </Button>{' '}
+                  </Col>
+                </Row>
+              </div>
+              </Col>
+          </Row>
+        </Container>
       </div>
     );
   }

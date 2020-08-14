@@ -1,3 +1,30 @@
 html {
     background-color: #F4D1CE;
+    height: 100%;
+    margin: 0px;
+    height: 0px;
 }
+
+body {
+    min-height: 100%;
+    position: block;
+    margin: 0px;
+    height: 0px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 3em;
+}
+
+.content {
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    [body] {
+      width: 100%;
+    }
+  }

@@ -1,18 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const styles = {
   footer: {
     position: "fixed",
     left: 0,
+    height: "35px",
     bottom: 0,
     width: "100%",
-    backgroundColor: "#E5E5E5",
-    color: "black",
+    backgroundColor: "#000",
+    color: "#f29c13",
+    marginTop: "auto",
   },
-  alignRight: { textAlign: "right" },
-  alignLeft: { textAlign: "left" },
+  alignRight: { 
+    textAlign: "right" 
+  },
 };
 
 const Footer = () => {
@@ -22,12 +25,11 @@ const Footer = () => {
         <Container>
           <Row>
             <Col>
-              <p>Copyright © KGB-C </p>
+              &copy;{new Date().getFullYear()} KGB-C | All Rights Reserved
             </Col>
-
             <Col style={styles.alignRight}>
-              <Link to="/login">Instructor ?</Link>
-            </Col>
+            <Link to="/login" id="orange">Instructor Login</Link>
+          </Col>
           </Row>
         </Container>
       </footer>

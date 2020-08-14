@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 const styles = {
     container: {
         marginTop: 25,
+        border: "10px solid #df6d3e",
+        backgroundColor: "#dfab9e"
     },
 };
 
@@ -23,6 +25,9 @@ const UpdateWorkout = () => {
                         <Form.Label>Location</Form.Label>
                         <Form.Control type="text" placeholder="Where will the session be?" />
                         <br />
+                        <Form.Label>Description</Form.Label>
+                        <Form.Control type="text" placeholder="Where will the session be?" />
+                        <br />
                         <Form.Label>Date</Form.Label>
                             <Form.Check id="Sunday" label="Sunday" />
                             <Form.Check id="Monday" label="Monday" />
@@ -33,7 +38,7 @@ const UpdateWorkout = () => {
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
                         <Button variant="success">
-                            <Link to="/viewworkouts">
+                            <Link to="/viewworkouts" id="white">
                             Update
                             </Link>
                         </Button>{' '}      
