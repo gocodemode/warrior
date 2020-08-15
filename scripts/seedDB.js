@@ -42,6 +42,30 @@ const workoutSeed = [
     Friday: false,
     Saturday: false,
   },
+  {
+    name: "Downward Dog Yoga",
+    description: "Yoga in the park next to City Hall",
+    location: "Savannah",
+    Sunday: true,
+    Monday: false,
+    Tuesday: true,
+    Wednesday: false,
+    Thursday: false,
+    Friday: false,
+    Saturday: false,
+  },
+  {
+    name: "Sunset Yoga",
+    description: "Yoga in the park",
+    location: "Columbus",
+    Sunday: false,
+    Monday: true,
+    Tuesday: false,
+    Wednesday: false,
+    Thursday: false,
+    Friday: false,
+    Saturday: false,
+  },
 ];
 
 db.Workouts.remove({})

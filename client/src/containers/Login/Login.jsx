@@ -94,11 +94,12 @@ const Login = ({ history }) => {
               // }} 
               />
             </Form.Group>
-            <Button variant="success" type="submit">
+            <Button variant="success" style={{margin: "10px"}} type="submit">
               {/* <Link to="/viewworkouts" id="white"> */}
               Login
               {/* </Link> */}
             </Button>
+            <Link to="/signup" id="white">Sign Up?</Link>
           </Form>
         </Container>     
     </div>

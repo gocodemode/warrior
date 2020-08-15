@@ -42,7 +42,7 @@ class UpdateWorkout extends Component {
     API.getWorkout(id)
       .then((res) => {
         console.log(res.data);
-        this.setState({...res.data });
+        this.setState({ ...res.data });
       })
       .catch((err) => console.log(err));
   };
@@ -70,42 +70,19 @@ class UpdateWorkout extends Component {
   handleFormSubmit = (event) => {
     const id = this.props.match.params.id;
     event.preventDefault();
-    axios.put(`/api/workouts/${id}`, {name:this.state.name, 
-      location: this.state.location,
-       description: this.state.description, 
-       Sunday: this.state.Sunday,
-       Monday: this.state.Monday,
-       Tuesday: this.state.Tuesday,
-       Wednesday: this.state.Wednesday,
-       Thursday: this.state.Thursday,
-       Friday: this.state.Friday
-     })
-    // API.updateWorkout(id, 
-      // this.setState({ [event.target.name]: event.target.checked })
-    //   {
-    //   name: this.name,
-    //   location: this.location,
-    //   description: this.description,
-    //   daysArray: [
-    //     { value: { isActive: this.Sunday, name: "Sunday" } },
-    //     { value: { isActive: this.Monday, name: "Monday" } },
-    //     { value: { isActive: this.Tuesday, name: "Tuesday" } },
-    //     {
-    //       value: {
-    //         isActive: this.Wednesday,
-    //         name: "Wednesday",
-    //       },
-    //     },
-    //     {
-    //       value: { isActive: this.Thursday, name: "Thursday" },
-    //     },
-    //     { value: { isActive: this.Friday, name: "Friday" } },
-    //     {
-    //       value: { isActive: this.Saturday, name: "Saturday" },
-    //     },
-    //   ],
-    // }
-    
+    axios
+      .put(`/api/workouts/${id}`, {
+        name: this.state.name,
+        location: this.state.location,
+        description: this.state.description,
+        Sunday: this.state.Sunday,
+        Monday: this.state.Monday,
+        Tuesday: this.state.Tuesday,
+        Wednesday: this.state.Wednesday,
+        Thursday: this.state.Thursday,
+        Friday: this.state.Friday,
+      })
+
       .then((response) => {
         console.log(response.data);
         setTimeout(() => {
