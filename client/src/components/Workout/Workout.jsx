@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
 // import { Form } from "react-bootstrap";
 import API from "../../utils/workouts";
-import { confirmAlert } from "react-confirm-alert";
+
 
 const Workout = (props) => {
   const deleteWorkout = (id) => {

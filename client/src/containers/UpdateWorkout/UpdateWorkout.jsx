@@ -49,6 +49,7 @@ class UpdateWorkout extends Component {
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
+    
     this.setState({ ...this.state.formObject, [name]: value });
   };
 
@@ -115,6 +116,7 @@ class UpdateWorkout extends Component {
                 name="location"
                 value={this.state.formObject.location}
                 placeholder={this.state.workoutdata.location}
+                
               />
               <br />
               <Form.Label>Description</Form.Label>
