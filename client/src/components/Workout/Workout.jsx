@@ -1,69 +1,66 @@
 import React from "react";
-import { InputGroup, ListGroup, Button, Row, Col } from "react-bootstrap";
+import InputGroup from "react-bootstrap/InputGroup";
+import ListGroup from "react-bootstrap/ListGroup";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
+// import { Form } from "react-bootstrap";
 import API from "../../utils/workouts";
-
-const styles = {
-  ListGroupItem: {
-    width: "100%",
-  }
-}
 
 
 const Workout = (props) => {
-  console.log("On load", props);
-
- const deleteWorkout = (id) => {
-   console.log("You clicked me.", props);
+  const deleteWorkout = (id) => {
+    console.log("You clicked the delete button.");
     API.deleteWorkout(id)
-    .then(res => {
-      console.log(res.data);
-    })
-  }
- const updateWorkout = (id) => {
-   console.log("You clicked me.", props);
-    API.updateWorkout(id)
-    .then(res => {
-      console.log(res.data);
-    })
-  }
+      .then(() => {
+        console.log("workout successfullydeleted");
+        window.location.replace("/viewworkouts");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div>
       <Row>
-        <Col>
         <InputGroup>
-          <ListGroup style={styles.ListGroupItem} className="d-flex bd-highlight">
+          <ListGroup>
             {props.days.map((day) => {
               if (day.value.isActive) {
                 return (
                   <>
-                  <ListGroup.Item className="p-2 flex-grow-1 bd-highlight">
-                    {props.name} is meeting in {props.location}. {props.description}. Session on  {day.value.name}
-                  </ListGroup.Item>
-                  <InputGroup.Append className="p-2 bd-highlight">
-                    <Button variant="outline-secondary">
-                      <i class="fas fa-calendar-times" onClick={() => {
-                      deleteWorkout(props.id);
-                      }} ></i>
-                    </Button>
-                    <Button variant="outline-secondary" onClick={() => {
-                      updateWorkout(props.id);
-                      
-                      }}>
-                      <Link to="/updateworkout">
-                        <i class="fas fa-edit"></i>
-                      </Link>
-                    </Button>
-                  </InputGroup.Append>
-                  <br />
+                    <ListGroup.Item>
+                      {props.name} is meeting at {props.location} for
+                      {props.description} on this day: {day.value.name}
+                    </ListGroup.Item>
+                    <InputGroup.Append>
+                      <Button variant="outline-secondary">
+                        <i
+                          class="fas fa-calendar-times"
+                          onClick={() => {
+                            deleteWorkout(props.id);
+                          }}
+                        ></i>
+                      </Button>
+                      <Button
+                        variant="outline-secondary"
+                        // onClick={() => {
+                        //   updateWorkout(props.id);
+                        // }}
+                      >
+                        <Link to={`/updateworkout/${props.id}`}>
+                          <i class="fas fa-edit"></i>
+                        </Link>
+                      </Button>
+                    </InputGroup.Append>
                   </>
                 );
               }
             })}
-          </ListGroup> 
+          </ListGroup>
         </InputGroup>
-        </Col>
       </Row>
     </div>
   );
