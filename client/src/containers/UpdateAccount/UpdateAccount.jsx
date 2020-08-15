@@ -1,17 +1,20 @@
 import React from 'react';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Button from 'react-bootstrap/Button';
+import { Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Form } from 'react-bootstrap';
+import "./UpdateAccount.css";
 
 
 const styles = {
     container: {
         marginTop: 25,
         border: "10px solid #df6d3e",
-        backgroundColor: "#dfab9e"
+        backgroundColor: "#dfab9e",
+        padding: 20,
     },
+    Button: {
+        margin: "5px 15px 0",
+      },
 };
 
 const UpdateAccount = () => {
@@ -30,8 +33,8 @@ const UpdateAccount = () => {
                     <br />
                     </Form.Group>
                 <Row>
-                    <Button variant="warning" type="submit">
-                    <Link to="/myaccount">
+                    <Button variant="success" type="submit" style={styles.Button}>
+                    <Link to="/myaccount" id="white">
                         Save
                     </Link>
                     </Button>

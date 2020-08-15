@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Form, Container, Button } from "react-bootstrap";
-import API from "../../src/utils/workouts";
+import API from "../../utils/workouts";
 import { Link } from "react-router-dom";
+import "./CreateWorkout.css";
 
 
 const styles = {
     container: {
         marginTop: 25,
         border: "10px solid #df6d3e",
-        backgroundColor: "#dfab9e"
+        backgroundColor: "#dfab9e",
+        padding: 20,
     },
 };
 
@@ -166,11 +168,11 @@ const CreateWorkout = () => {
             />
             <br />
             <Button
-              variant="warning"
+              variant="success"
               // disabled={!(formObject.name && formObject.description)}
               onClick={handleFormSubmit}
             >
-              <Link to="/viewworkouts">
+              <Link to="/viewworkouts" id="white">
                   Create
               </Link>
             </Button>{" "}

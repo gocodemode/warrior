@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
-import API from "../utils/workouts";
+
 
 const styles = {
     container: {
@@ -52,8 +52,8 @@ const UpdateWorkout = () => {
                             <Form.Check id="Friday" label="Friday" />
                             <Form.Check id="Saturday" label="Saturday" ></Form.Check>
                         <br />
-                        <Button variant="warning">
-                            <Link to="/viewworkouts">
+                        <Button variant="success">
+                            <Link to="/viewworkouts" id="white">
                             Update
                             </Link>
                         </Button>{' '}      

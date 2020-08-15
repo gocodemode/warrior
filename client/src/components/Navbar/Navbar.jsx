@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Navbar, Col } from 'react-bootstrap/';
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const styles = {
   alignRight: { textAlign: "right" },
@@ -23,7 +24,7 @@ class Nav extends Component {
           </Navbar.Brand>
           </Col>
           <Col style={styles.alignRight}>
-            <Link to="/contents">Workouts</Link>
+            <Link to="/contents" id="orange">Workouts</Link>
           </Col>
         </Navbar>
       </div>

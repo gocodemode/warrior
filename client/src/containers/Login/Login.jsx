@@ -1,8 +1,21 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 import { Form, Button, Container } from 'react-bootstrap';
-import UserContext from "../utils/StatusContext";
+import UserContext from "../../utils/StatusContext";
 import { Link } from "react-router-dom";
+
+
+const styles = {
+  container: {
+      marginTop: 100,
+      marginBottom: 150,
+      marginLeft: "auto",
+      marginRight: "auto",
+      border: "10px solid #df6d3e",
+      backgroundColor: "#df6d3e",
+      padding: 30,
+  },
+};
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -27,7 +40,7 @@ const Login = (props) => {
 
   return (
     <div>
-      <Container>
+      <Container style={styles.container}>
           <Form>
             <Form.Group controlId="formBasicEmail" onSubmit={handleSubmit}>
               <Form.Label>Email address</Form.Label>
@@ -52,7 +65,7 @@ const Login = (props) => {
               }} />
             </Form.Group>
             <Button variant="success" type="submit">
-              <Link to="/viewworkouts">
+              <Link to="/viewworkouts" id="white">
               Submit
               </Link>
             </Button>
