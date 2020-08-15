@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link, withRouter } from "react-router-dom";
 import API from "../../utils/workouts";
+import axios from "axios";
 
 const styles = {
   container: {
@@ -41,7 +42,7 @@ class UpdateWorkout extends Component {
     API.getWorkout(id)
       .then((res) => {
         console.log(res.data);
-        this.setState({ workoutdata: res.data });
+        this.setState({...res.data });
       })
       .catch((err) => console.log(err));
   };
@@ -69,33 +70,44 @@ class UpdateWorkout extends Component {
   handleFormSubmit = (event) => {
     const id = this.props.match.params.id;
     event.preventDefault();
-    API.updateWorkout(id, 
+    axios.put(`/api/workouts/${id}`, {name:this.state.name, 
+      location: this.state.location,
+       description: this.state.description, 
+       Sunday: this.state.Sunday,
+       Monday: this.state.Monday,
+       Tuesday: this.state.Tuesday,
+       Wednesday: this.state.Wednesday,
+       Thursday: this.state.Thursday,
+       Friday: this.state.Friday
+     })
+    // API.updateWorkout(id, 
       // this.setState({ [event.target.name]: event.target.checked })
-      {
-      name: this.name,
-      location: this.location,
-      description: this.description,
-      daysArray: [
-        { value: { isActive: this.Sunday, name: "Sunday" } },
-        { value: { isActive: this.Monday, name: "Monday" } },
-        { value: { isActive: this.Tuesday, name: "Tuesday" } },
-        {
-          value: {
-            isActive: this.Wednesday,
-            name: "Wednesday",
-          },
-        },
-        {
-          value: { isActive: this.Thursday, name: "Thursday" },
-        },
-        { value: { isActive: this.Friday, name: "Friday" } },
-        {
-          value: { isActive: this.Saturday, name: "Saturday" },
-        },
-      ],
-    }
-    )
-      .then(() => {
+    //   {
+    //   name: this.name,
+    //   location: this.location,
+    //   description: this.description,
+    //   daysArray: [
+    //     { value: { isActive: this.Sunday, name: "Sunday" } },
+    //     { value: { isActive: this.Monday, name: "Monday" } },
+    //     { value: { isActive: this.Tuesday, name: "Tuesday" } },
+    //     {
+    //       value: {
+    //         isActive: this.Wednesday,
+    //         name: "Wednesday",
+    //       },
+    //     },
+    //     {
+    //       value: { isActive: this.Thursday, name: "Thursday" },
+    //     },
+    //     { value: { isActive: this.Friday, name: "Friday" } },
+    //     {
+    //       value: { isActive: this.Saturday, name: "Saturday" },
+    //     },
+    //   ],
+    // }
+    
+      .then((response) => {
+        console.log(response.data);
         setTimeout(() => {
           window.location.replace("/viewworkouts");
         }, 1500);
@@ -116,7 +128,7 @@ class UpdateWorkout extends Component {
                 onChange={this.handleInputChange}
                 name="name"
                 value={this.state.name}
-                placeholder={this.state.workoutdata.name}
+                placeholder={this.state.name}
               />
               <br />
               <Form.Label>Location</Form.Label>
@@ -125,7 +137,7 @@ class UpdateWorkout extends Component {
                 onChange={this.handleInputChange}
                 name="location"
                 value={this.state.location}
-                placeholder={this.state.workoutdata.location}
+                placeholder={this.state.location}
               />
               <br />
               <Form.Label>Description</Form.Label>
@@ -134,7 +146,7 @@ class UpdateWorkout extends Component {
                 onChange={this.handleInputChange}
                 name="description"
                 value={this.state.description}
-                placeholder={this.state.workoutdata.description}
+                placeholder={this.state.description}
               />
               <br />
               <Form.Label>Date</Form.Label>
@@ -192,9 +204,6 @@ class UpdateWorkout extends Component {
               <Button variant="success" type="submit">
                 {" "}
                 Update
-                {/* <Link to="/viewworkouts" id="white">
-                  Update
-                </Link> */}
               </Button>{" "}
             </Form.Group>
           </Form>
