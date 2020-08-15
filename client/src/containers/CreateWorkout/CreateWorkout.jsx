@@ -67,12 +67,7 @@ const CreateWorkout = () => {
       })
         .then(() =>
         window.location.reload("/viewworkouts")
-          // setFormObject({
-          //   name: "",
-          //   location: "",
-          //   description: "",
-          //   date: "",
-          // })
+        
         )
         .then(() => loadWorkouts())
         .catch((err) => console.log(err));
