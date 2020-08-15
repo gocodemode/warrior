@@ -44,10 +44,9 @@ const Signup = ({ history }) => {
             <Col sm={3} id="signCol">
               <Form onSubmit={handleSignUp}>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control id="firstName" type="text" name="firstName" />
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control id="lastName" type="text" name="lastName" />
+                 
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control id="lastName" type="text" name="name" />
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
                     id="email"
@@ -71,10 +70,10 @@ const Signup = ({ history }) => {
                     // }}
                   />
                 </Form.Group>
-                <Button id="signup" variant="success" type="submit">
+                <Button id="signup" style={{margin: "10px"}} variant="success" type="submit">
                  Sign Up
                 </Button>
-              /Login
+                <Link to="/login" id="white">Login?</Link>
               </Form>
             </Col>
           </Row>

@@ -12,9 +12,11 @@ class Contents extends Component {
   state = {
     location: [],
     eventKey: "",
+    workoutdata: []
   };
 
   componentDidMount() {
+    this.loadWorkouts()
     this.handleSelect();
   }
 
@@ -30,6 +32,17 @@ class Contents extends Component {
 
       .catch((err) => console.log(err));
   };
+
+  loadWorkouts = () => {
+    API.getWorkouts()
+      .then(res => {
+        console.log(res.data);
+        this.setState({workoutdata: res.data});
+        
+      }) 
+      .catch(err => console.log(err));
+  };
+
 
   render() {
     return (
@@ -54,6 +67,15 @@ class Contents extends Component {
         </Row>
         <Row>
           {this.state.location.map((data) => (
+            <WorkoutCard
+              class="cards"
+              location={data.location}
+              // day={data.daysArray.value.name}
+              name={data.name}
+              description={data.description}
+            />
+          ))}
+           {this.state.workoutdata.map((data) => (
             <WorkoutCard
               class="cards"
               location={data.location}
