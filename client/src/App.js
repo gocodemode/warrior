@@ -16,6 +16,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+import Signup from "./containers/Signup/Signup";
+import { AuthProvider } from "./utils/Auth";
+import PrivateRoute from "./utils/PrivateRoute";
+
 
 function App() {
   useEffect(() => {
@@ -31,22 +35,25 @@ function App() {
 
   return (
     <div className="App page-container content">
+      <AuthProvider>
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/login" component={Login}/>
-          <Route exact path="/contents" component={Contents}/>
-          <Route exact path="/myaccount" component={MyAccount}/>
-          <Route exact path="/createworkout" component={CreateWorkout}/>
-          <Route exact path="/viewworkouts" component={ViewWorkouts}/>
-          <Route exact path="/updateworkout/:id" component={UpdateWorkout}/>
-          <Route exact path="/updateaccount" component={UpdateAccount}/>
-          <Route exact path="/modal" component={Modal}/>
-          <Route component={NoMatch}/>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/contents" component={Contents} />
+          <PrivateRoute exact path="/myaccount" component={MyAccount} />
+          <PrivateRoute exact path="/createworkout" component={CreateWorkout} />
+          <PrivateRoute exact path="/viewworkouts" component={ViewWorkouts} />
+          <PrivateRoute exact path="/updateworkout:id" component={UpdateWorkout} />
+          <PrivateRoute exact path="/updateaccount" component={UpdateAccount} />
+          <Route exact path="/modal" component={Modal} />
+          <Route component={NoMatch} />
         </Switch>
         <Footer />
       </Router>
+      </AuthProvider>
     </div>
   );
 }
