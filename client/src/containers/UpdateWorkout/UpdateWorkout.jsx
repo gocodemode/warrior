@@ -82,31 +82,6 @@ class UpdateWorkout extends Component {
         Thursday: this.state.Thursday,
         Friday: this.state.Friday,
       })
-      // API.updateWorkout(id,
-      // this.setState({ [event.target.name]: event.target.checked })
-      //   {
-      //   name: this.name,
-      //   location: this.location,
-      //   description: this.description,
-      //   daysArray: [
-      //     { value: { isActive: this.Sunday, name: "Sunday" } },
-      //     { value: { isActive: this.Monday, name: "Monday" } },
-      //     { value: { isActive: this.Tuesday, name: "Tuesday" } },
-      //     {
-      //       value: {
-      //         isActive: this.Wednesday,
-      //         name: "Wednesday",
-      //       },
-      //     },
-      //     {
-      //       value: { isActive: this.Thursday, name: "Thursday" },
-      //     },
-      //     { value: { isActive: this.Friday, name: "Friday" } },
-      //     {
-      //       value: { isActive: this.Saturday, name: "Saturday" },
-      //     },
-      //   ],
-      // }
 
       .then((response) => {
         console.log(response.data);
