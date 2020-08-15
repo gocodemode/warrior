@@ -96,7 +96,7 @@ const Login = ({ history }) => {
             </Form.Group>
             <Button variant="success" type="submit">
               {/* <Link to="/viewworkouts" id="white"> */}
-              Submit
+              Login
               {/* </Link> */}
             </Button>
           </Form>

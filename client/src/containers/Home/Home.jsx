@@ -10,7 +10,7 @@ class Home extends Component {
     window.Appcues.identify("firstName");
     return (
       <div>
-        <Container>
+        <Container id="one">
           <Row>
             <Col xs={{ span: 8, offset: 2 }}> 
               <div id="serenity">
