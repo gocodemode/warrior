@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, ListGroup, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import app from "../../utils/base";
+
 
 
 const styles = {
@@ -42,6 +44,11 @@ const MyAccount = () => {
               <Button variant="info" type="submit" style={styles.Button}>
                   <Link to="/viewworkouts" id="white">
                       My Workouts
+                  </Link>
+              </Button>
+              <Button variant="info" type="submit" style={styles.Button} onClick={() => app.auth().signOut()}>
+                  <Link to="/" id="white">
+                      Sign Out
                   </Link>
               </Button>
             </Row>

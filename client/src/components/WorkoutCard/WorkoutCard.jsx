@@ -11,10 +11,11 @@ const WorkoutCard = (props) => {
     <Card className= "grow" id="workoutCard" style={{ width: "18rem" }} style={{margin: "15px"}}>
       <Card.Img id="cardImage" variant="top" src="/Images/yogaonroof.jpg" />
       <Card.Body>
-        <Card.Title id="title">Yoga on the Roof</Card.Title>
+        <Card.Title id="title">{props.name}</Card.Title>
         <Card.Text id="cardText">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+         About:  {props.description } 
+         Location: {props.location}
+         This Workout Occurs on {props.day}
         </Card.Text>
         <Button id= "button" variant="primary" block>Go somewhere</Button>
       </Card.Body>
