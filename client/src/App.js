@@ -46,7 +46,7 @@ function App() {
           <PrivateRoute exact path="/myaccount" component={MyAccount} />
           <PrivateRoute exact path="/createworkout" component={CreateWorkout} />
           <PrivateRoute exact path="/viewworkouts" component={ViewWorkouts} />
-          <PrivateRoute exact path="/updateworkout" component={UpdateWorkout} />
+          <PrivateRoute exact path="/updateworkout/:id" component={UpdateWorkout} />
           <PrivateRoute exact path="/updateaccount" component={UpdateAccount} />
           <Route exact path="/modal" component={Modal} />
           <Route component={NoMatch} />
