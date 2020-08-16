@@ -22,7 +22,7 @@ const Signup = ({ history }) => {
     async (event) => {
       event.preventDefault();
       const { email, password, name } = event.target.elements;
-      API.saveInstructor({email, password, name});
+      API.saveInstructor({email:email.value, password:password.value, name:name.value});
       try {
         await app
           .auth()
