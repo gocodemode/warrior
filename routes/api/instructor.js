@@ -10,7 +10,7 @@ router
 // Matches with "/api/instructors/:id"
 router
   .route("/:id")
-  .get(instructorController.findByEmail)
+  .get(instructorController.findById)
   .put(instructorController.update)
   .delete(instructorController.remove);
 
