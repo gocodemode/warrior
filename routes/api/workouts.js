@@ -13,4 +13,12 @@ router
   .put(workoutsController.update)
   .delete(workoutsController.remove);
 
+  router
+  .route("/locations/:location")
+  .get(workoutsController.findByLocation)
+  // .put(workoutsController.update)
+  // .delete(workoutsController.remove);
+
+
+
 module.exports = router;

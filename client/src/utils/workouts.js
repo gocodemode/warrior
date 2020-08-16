@@ -9,6 +9,10 @@ export default {
   getWorkout: function(id) {
     return axios.get("/api/workouts/" + id);
   },
+
+  getWorkoutLocation: function(location) {
+    return axios.get("/api/workouts/locations/" + location);
+  },
   // Deletes the book with the given id
   deleteWorkout: function(id) {
     return axios.delete("/api/workouts/" + id);
@@ -20,4 +24,5 @@ export default {
   updateWorkout: function(workoutData,id) {
     return axios.put(`/api/workouts/${id}`, workoutData);
   }
+
 };
