@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch/NoMatch";
 import Login from "./containers/Login/Login";
-import Modal from "./containers/Modal";
 import ViewWorkouts from "./containers/ViewWorkouts/ViewWorkouts";
 import UpdateWorkout from "./containers/UpdateWorkout/UpdateWorkout";
 import UpdateAccount from "./containers/UpdateAccount/UpdateAccount";
@@ -19,7 +18,7 @@ import "./App.css";
 import Signup from "./containers/Signup/Signup";
 import { AuthProvider } from "./utils/Auth";
 import PrivateRoute from "./utils/PrivateRoute";
-
+import MCSignup from "./containers/MCSignup/MCSignup";
 
 function App() {
   useEffect(() => {
@@ -32,7 +31,7 @@ function App() {
         console.log(err);
       });
   }, []);
-
+  window.Appcues.identify("firstName");
   return (
     <div className="App page-container content">
       <AuthProvider>
@@ -43,12 +42,12 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/contents" component={Contents} />
+          <Route exact path="/subscribe" component={MCSignup} />
           <PrivateRoute exact path="/myaccount" component={MyAccount} />
           <PrivateRoute exact path="/createworkout" component={CreateWorkout} />
           <PrivateRoute exact path="/viewworkouts" component={ViewWorkouts} />
           <PrivateRoute exact path="/updateworkout/:id" component={UpdateWorkout} />
           <PrivateRoute exact path="/updateaccount" component={UpdateAccount} />
-          <Route exact path="/modal" component={Modal} />
           <Route component={NoMatch} />
         </Switch>
         <Footer />

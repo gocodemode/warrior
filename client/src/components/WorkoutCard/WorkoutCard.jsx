@@ -13,8 +13,14 @@ const WorkoutCard = (props) => {
       <Card.Body>
         <Card.Title id="title">{props.name}</Card.Title>
         <Card.Text id="cardText">
-         About:  {props.description } 
-         Location: {props.location}
+         <strong>About:</strong> 
+         <br></br>
+         {props.description } 
+         <br></br>
+         <strong>Location:</strong>
+         <br></br>
+         {props.location}
+         <br></br>
          This Workout Occurs on {props.day}
         </Card.Text>
         <Button id= "button" variant="primary" block>Go somewhere</Button>
