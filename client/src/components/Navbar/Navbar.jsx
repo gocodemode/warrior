@@ -20,7 +20,7 @@ class Nav extends Component {
               height="30"
               className="d-inline-block align-top"
               alt="Warrior"
-            /> Warrior
+            /> arrior
           </Navbar.Brand>
           </Col>
           <Col style={styles.alignRight}>

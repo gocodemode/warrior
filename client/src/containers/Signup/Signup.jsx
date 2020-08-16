@@ -1,14 +1,8 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
-<<<<<<< HEAD
-import app from "../../utils/base"
-import { Form, Button, Container } from 'react-bootstrap';
-// import { Link } from "react-router-dom";
-=======
 import app from "../../utils/base";
 import { Form, Button, Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
->>>>>>> 07b817e23ce627f420da2ab4cf17af3b4cd11303
 
 const styles = {
   container: {
@@ -79,7 +73,7 @@ const Signup = ({ history }) => {
                 <Button id="signup" style={{margin: "10px"}} variant="success" type="submit">
                  Sign Up
                 </Button>
-                <Link to="/login" id="white">Login?</Link>
+                <Link to="/login" id="white">Login</Link>
               </Form>
             </Col>
           </Row>
