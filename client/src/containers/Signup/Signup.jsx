@@ -25,7 +25,7 @@ const Signup = ({ history }) => {
         await app
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
-        history.push("/viewworkouts");
+        history.push("/myaccount");
       } catch (error) {
         alert(error);
       }
@@ -36,19 +36,19 @@ const Signup = ({ history }) => {
   return (
     <div>
       <div>
-        <Container style={styles.container}>
+       <Container style={styles.container}>
           <Row id="signupRow">
             <Col sm={8}>
-            <Image src="/Images/instructor.jpeg" rounded />
+            <Image src="/Images/instructor.jpeg" rounded fluid />
             </Col>
             <Col sm={3} id="signCol">
               <Form onSubmit={handleSignUp}>
                 <Form.Group controlId="formBasicEmail">
                  
-                  <Form.Label>Name</Form.Label>
+                  <Form.Label id="white">Name</Form.Label>
                   <Form.Control id="lastName" type="text" name="name" />
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
+                  <Form.Label id="white">Email address</Form.Label>
+                   <Form.Control
                     id="email"
                     type="text"
                     name="email"
@@ -59,7 +59,7 @@ const Signup = ({ history }) => {
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label id="white">Password</Form.Label>
                   <Form.Control
                     id="password"
                     type="password"
