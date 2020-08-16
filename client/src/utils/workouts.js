@@ -5,7 +5,7 @@ export default {
   getWorkouts: function() {
     return axios.get("/api/workouts");
   },
-  // Gets the book with the given id
+  // Gets the workout with the given id
   getWorkout: function(id) {
     return axios.get("/api/workouts/" + id);
   },
@@ -13,16 +13,15 @@ export default {
   getWorkoutLocation: function(location) {
     return axios.get("/api/workouts/locations/" + location);
   },
-  // Deletes the book with the given id
+  // Deletes the workout with the given id
   deleteWorkout: function(id) {
     return axios.delete("/api/workouts/" + id);
   },
-  // Saves a book to the database
+  // Saves a workout to the database
   saveWorkout: function(workoutData) {
     return axios.post("/api/workouts", workoutData);
   },
-  updateWorkout: function(id,workoutData) {
-    return axios.put("/api/workout/" + id, workoutData);
+  updateWorkout: function(workoutData,id) {
+    return axios.put(`/api/workouts/${id}`, workoutData);
   }
-
 };

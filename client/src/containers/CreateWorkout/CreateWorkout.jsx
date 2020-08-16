@@ -34,7 +34,7 @@ const CreateWorkout = () => {
     loadWorkouts();
   }, []);
 
-  // Loads all workouts and sets them to workouts
+//   // Loads all workouts and sets them to workouts
   const loadWorkouts = () => {
     API.getWorkouts()
       .then((res) => setWorkouts(res.data))
@@ -172,6 +172,7 @@ const CreateWorkout = () => {
                   Create
               </Link>
             </Button>{" "}
+            
           </Form.Group>
         </Form>
       </Container>

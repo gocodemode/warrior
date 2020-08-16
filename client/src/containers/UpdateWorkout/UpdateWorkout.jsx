@@ -6,6 +6,7 @@ import { Link, withRouter } from "react-router-dom";
 import API from "../../utils/workouts";
 import axios from "axios";
 
+
 const styles = {
   container: {
     marginTop: 25,
