@@ -48,7 +48,7 @@ const Login = ({ history }) => {
         await app
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/viewworkouts");
+        history.push("/myaccount");
       } catch (error) {
         alert(error);
       }
@@ -59,7 +59,7 @@ const Login = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/viewworkouts" />;
+    return <Redirect to="/myaccount" />;
   }
 
 
@@ -71,7 +71,7 @@ const Login = ({ history }) => {
       <Container style={styles.container}>
           <Form onSubmit={handleLogin}>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label id="white">Email address</Form.Label>
               <Form.Control 
               id="email"
               type="text"
@@ -83,7 +83,7 @@ const Login = ({ history }) => {
                />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label id="white">Password</Form.Label>
               <Form.Control 
               id="password"
               type="password"
