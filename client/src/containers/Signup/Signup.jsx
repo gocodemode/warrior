@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import app from "../../utils/base";
 import { Form, Button, Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import API from "../../utils/instructor";
 
 const styles = {
   container: {
@@ -20,7 +21,8 @@ const Signup = ({ history }) => {
   const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
-      const { email, password } = event.target.elements;
+      const { email, password, name } = event.target.elements;
+      API.saveInstructor({email, password, name});
       try {
         await app
           .auth()
