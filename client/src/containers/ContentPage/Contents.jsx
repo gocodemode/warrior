@@ -20,19 +20,6 @@ class Contents extends Component {
     this.handleSelect();
   }
 
-  handleSelect = (event) => {
-    console.log(event);
-    API.getWorkoutLocation(event)
-      .then((res) => {
-        console.log(res.data);
-
-        this.setState({ location: res.data });
-        console.log({ location: res.data });
-      })
-
-      .catch((err) => console.log(err));
-  };
-
   loadWorkouts = () => {
     API.getWorkouts()
       .then(res => {
@@ -42,6 +29,34 @@ class Contents extends Component {
       }) 
       .catch(err => console.log(err));
   };
+
+  handleSelect = (event) => {
+    console.log(event);
+    
+    API.getWorkoutLocation(event)
+      .then((res) => {
+      
+        console.log(res.data);
+        this.setState({ location: res.data });
+        
+        console.log({ location: res.data });
+      })
+      .then((res) => {
+        this.setState({workoutdata: []});
+      })
+
+      .catch((err) => console.log(err));
+  };
+
+  // loadWorkouts = () => {
+  //   API.getWorkouts()
+  //     .then(res => {
+  //       console.log(res.data);
+  //       this.setState({workoutdata: res.data});
+        
+  //     }) 
+  //     .catch(err => console.log(err));
+  // };
 
 
   render() {
