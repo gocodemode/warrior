@@ -86,9 +86,7 @@ const Signup = ({ history }) => {
                 >
                   Sign Up
                 </Button>
-                <Link to="/login" id="white">
-                  Login?
-                </Link>
+                <Link to="/login" id="white">Login</Link>
               </Form>
             </Col>
           </Row>

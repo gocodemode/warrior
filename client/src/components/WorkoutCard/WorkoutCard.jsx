@@ -22,7 +22,7 @@ const WorkoutCard = (props) => {
          <br></br>
          {props.location}
          <br></br>
-         <strong>Day of the Week:</strong> 
+         <strong>Days of the Week:</strong> 
          <br></br>
          {props.day}
          <br></br>

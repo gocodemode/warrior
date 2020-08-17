@@ -7,9 +7,10 @@ html {
 
 body {
     min-height: 100%;
-    position: block;
+    position: relative;
     margin: 0px;
     height: 0px;
+    margin-bottom: 3em;
 }
 
 .page-container {
@@ -22,9 +23,3 @@ body {
 .content {
     flex: 1;
 }
-
-@media only screen and (max-width: 768px) {
-    [body] {
-      width: 100%;
-    }
-  }
