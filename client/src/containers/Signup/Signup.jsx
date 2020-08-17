@@ -22,7 +22,11 @@ const Signup = ({ history }) => {
     async (event) => {
       event.preventDefault();
       const { email, password, name } = event.target.elements;
-      API.saveInstructor({email:email.value, password:password.value, name:name.value});
+      API.saveInstructor({
+        email: email.value,
+        password: password.value,
+        name: name.value,
+      });
       try {
         await app
           .auth()
@@ -38,19 +42,21 @@ const Signup = ({ history }) => {
   return (
     <div>
       <div>
-       <Container style={styles.container}>
+        <Container style={styles.container}>
           <Row id="signupRow">
             <Col sm={8}>
-            <Image src="/Images/instructor.jpeg" rounded fluid />
+              <Image src="/Images/instructor.jpeg" rounded fluid />
             </Col>
             <Col sm={3} id="signCol">
               <Form onSubmit={handleSignUp}>
                 <Form.Group controlId="formBasicEmail">
-                 
-                  <Form.Label id="white">Name</Form.Label>
+                  <Form.Label id="white">First Name</Form.Label>
+                  <Form.Control id="firstName" type="text" name="name" />
+
+                  <Form.Label id="white">Last Name</Form.Label>
                   <Form.Control id="lastName" type="text" name="name" />
                   <Form.Label id="white">Email address</Form.Label>
-                   <Form.Control
+                  <Form.Control
                     id="email"
                     type="text"
                     name="email"
@@ -72,10 +78,17 @@ const Signup = ({ history }) => {
                     // }}
                   />
                 </Form.Group>
-                <Button id="signup" style={{margin: "10px"}} variant="success" type="submit">
-                 Sign Up
+                <Button
+                  id="signup"
+                  style={{ margin: "10px" }}
+                  variant="success"
+                  type="submit"
+                >
+                  Sign Up
                 </Button>
-                <Link to="/login" id="white">Login?</Link>
+                <Link to="/login" id="white">
+                  Login?
+                </Link>
               </Form>
             </Col>
           </Row>

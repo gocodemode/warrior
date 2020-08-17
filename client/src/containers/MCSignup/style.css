@@ -1,6 +1,8 @@
 .container {
     /* background-color: #df6d3e;
     margin-top: 25px; */
+
+    /* background-image: url("https://lh3.googleusercontent.com/proxy/gvg4vLqE1FZGcZgZVGfSdWlQvAbEBxiYAR8Ihgyejhr5Y2VWQoncaIR9oiRnnRUUaahBjLfp97Bd_NButkvoZBUQBkTWkCVqZaGFXdq98vvnLaCPhZfyvoBmQKPb") */
 }
 
 #imageCol {
@@ -9,5 +11,18 @@
 }
 
 #subscribe {
+    text-align: center;
+}
+
+#sub {
+    /* background-image: url("https://www.exploregeorgia.org/sites/default/files/2019-10/callaway-wellness.jpg"); */
+}
+/* 
+#subImage {
+    height: 100%;
+    width: 85%;
+} */
+
+h4 {
     text-align: center;
 }

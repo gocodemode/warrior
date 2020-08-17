@@ -17,16 +17,23 @@ const styles = {
 
 const MCSignup = () => {
   return (
-    <Container style={styles.container}>
+    <Container id="sub" style={styles.container}>
       <Row id="signupRow">
         <Col sm={8}>
           <Image
-            src="https://lh3.googleusercontent.com/proxy/gvg4vLqE1FZGcZgZVGfSdWlQvAbEBxiYAR8Ihgyejhr5Y2VWQoncaIR9oiRnnRUUaahBjLfp97Bd_NButkvoZBUQBkTWkCVqZaGFXdq98vvnLaCPhZfyvoBmQKPb"
+            id="subImage"
+            src="https://www.exploregeorgia.org/sites/default/files/2019-10/callaway-wellness.jpg"
             rounded
             fluid
           />
         </Col>
         <Col sm={3} id="signCol">
+          <br></br>
+          <h4 id="white">
+            Subscribe here to be the first to know about future Warrior safe
+            workouts!{" "}
+          </h4>
+          <br></br>
           <Form
             action="https://wordpress.us9.list-manage.com/subscribe/post"
             method="POST"
@@ -43,7 +50,6 @@ const MCSignup = () => {
                 <Form.Control
                   id="MERGE0"
                   type="email"
-
                   name="MERGE0"
                   // value={email}
                   // onChange={(e) => {
