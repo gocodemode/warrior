@@ -29,7 +29,7 @@ class UpdateWorkout extends Component {
     Thursday: false,
     Friday: false,
     Saturday: false,
-    redirect: false
+    redirect: false,
     // },
   };
 
@@ -72,22 +72,26 @@ class UpdateWorkout extends Component {
   handleFormSubmit = (event) => {
     const id = this.props.match.params.id;
     event.preventDefault();
-    axios.put(`/api/workouts/${id}`, {name:this.state.name,
+    axios
+      .put(`/api/workouts/${id}`, {
+        name: this.state.name,
         location: this.state.location,
         description: this.state.description,
-        Sunday: this.state.Sunday,
-        Monday: this.state.Monday,
-        Tuesday: this.state.Tuesday,
-        Wednesday: this.state.Wednesday,
-        Thursday: this.state.Thursday,
-        Friday: this.state.Friday,
+        daysArray: [
+          { value: { isActive: this.state.Sunday, name: "Sunday" } },
+          { value: { isActive: this.state.Monday, name: "Monday" } },
+          { value: { isActive: this.state.Tuesday, name: "Tuesday" } },
+          { value: { isActive: this.state.Wednesday, name: "Wednesday" } },
+          { value: { isActive: this.state.Thursday, name: "Thursday" } },
+          { value: { isActive: this.state.Friday, name: "Friday" } },
+          { value: { isActive: this.state.Saturday, name: "Saturday" } },
+        ],
       })
       .then((response) => {
         console.log(response.data);
-        this.setState({redirect: true});
+        this.setState({ redirect: true });
         // return <Redirect to="/viewworkouts" />
 
-     
         // setTimeout(() => {
         //   window.location.reload("/viewworkouts");
         // }, 1500);
@@ -96,12 +100,11 @@ class UpdateWorkout extends Component {
   };
 
   render() {
-    if(this.state.redirect) {
-      return <Redirect to="/viewworkouts" />
-    } 
+    if (this.state.redirect) {
+      return <Redirect to="/viewworkouts" />;
+    }
     return (
       <div>
-      
         <Container style={styles.container}>
           <Form onSubmit={this.handleFormSubmit}>
             <Form.Group>
@@ -134,7 +137,6 @@ class UpdateWorkout extends Component {
               />
               <br />
               <Form.Label>Date</Form.Label>
-              
               <Form.Check
                 id="Sunday"
                 label="Sunday"
