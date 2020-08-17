@@ -11,7 +11,6 @@ const styles = {
   // },
   Row:{
     maxWidth: "100%",
-
     // marginLeft: "35px"
     padding: 20,
   },
