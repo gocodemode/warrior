@@ -75,7 +75,7 @@ const Signup = ({ history }) => {
                 <Button id="signup" style={{margin: "10px"}} variant="success" type="submit">
                  Sign Up
                 </Button>
-                <Link to="/login" id="white">Login?</Link>
+                <Link to="/login" id="white">Login</Link>
               </Form>
             </Col>
           </Row>

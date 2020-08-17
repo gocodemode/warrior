@@ -99,7 +99,7 @@ const Login = ({ history }) => {
               Login
               {/* </Link> */}
             </Button>
-            <Link to="/signup" id="white">Sign Up?</Link>
+            <Link to="/signup" id="white">Sign Up</Link>
           </Form>
         </Container>     
     </div>

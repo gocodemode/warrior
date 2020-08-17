@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import "./style.css";
+import "./Contents.css";
 import WorkoutCard from "../../components/WorkoutCard/WorkoutCard";
 import API from "../../utils/workouts";
 
@@ -61,7 +61,8 @@ class Contents extends Component {
 
   render() {
     return (
-      <Container id="contents">
+      <div>
+      <Container>
         <Row id="filterRow">
           <Col sm={2} id="filterCol">
             <DropdownButton
@@ -107,6 +108,7 @@ class Contents extends Component {
        <WorkoutCard class="cards" /> */}
         </Row>
       </Container>
+      </div>
     );
   }
 }
