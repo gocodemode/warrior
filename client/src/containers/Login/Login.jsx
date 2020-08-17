@@ -21,24 +21,24 @@ const styles = {
 };
 
 const Login = ({ history }) => {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // const user = useContext(UserContext);
+  const user = useContext(UserContext);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // axios call to login
-  //   axios
-  //     .post("/api/login", { email: email, password: password })
-  //     .then((response) => {
-  //       console.log(response.data);
-  //       user.handleLogin(response.data.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  //   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // axios call to login
+    axios
+      .post("/api/login", { email: email, password: password })
+      .then((response) => {
+        console.log(response.data);
+        user.handleLogin(response.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
 
   const handleLogin = useCallback(
     async event => {
