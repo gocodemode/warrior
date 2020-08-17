@@ -134,7 +134,7 @@ class UpdateWorkout extends Component {
               />
               <br />
               <Form.Label>Date</Form.Label>
-              <p>This workout was previously scheduled on {}</p>
+              
               <Form.Check
                 id="Sunday"
                 label="Sunday"
