@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 
@@ -21,9 +22,17 @@ const WorkoutCard = (props) => {
          <br></br>
          {props.location}
          <br></br>
-         This Workout Occurs on {props.day}
+         <strong>Days of the Week:</strong> 
+         <br></br>
+         {props.day}
+         <br></br>
+         Subscribe to our mailing list for future workouts!
         </Card.Text>
-        <Button id= "button" variant="primary" block>Subscribe</Button>
+        <Button id= "button" variant="primary" block>
+          <Link to ="/subscribe" id="white">Subscribe</Link>
+        
+        </Button>
+        
       </Card.Body>
     </Card>
     </Col>
