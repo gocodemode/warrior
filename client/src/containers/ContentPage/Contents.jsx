@@ -17,7 +17,7 @@ class Contents extends Component {
 
   componentDidMount() {
     this.loadWorkouts()
-    // this.handleSelect();
+   
   }
 
   loadWorkouts = () => {
@@ -48,16 +48,6 @@ class Contents extends Component {
       .catch((err) => console.log(err));
   };
 
-  // loadWorkouts = () => {
-  //   API.getWorkouts()
-  //     .then(res => {
-  //       console.log(res.data);
-  //       this.setState({workoutdata: res.data});
-        
-  //     }) 
-  //     .catch(err => console.log(err));
-  // };
-
 
   render() {
     return (
@@ -86,7 +76,6 @@ class Contents extends Component {
             <WorkoutCard
               class="cards"
               location={data.location}
-              // day={data.daysArray.value.name}
               name={data.name}
               description={data.description}
             />
@@ -95,17 +84,16 @@ class Contents extends Component {
             <WorkoutCard
               class="cards"
               location={data.location}
-              // day={data.daysArray.value.name}
+              day={data.daysArray.map((days) => {
+                console.log(days)
+                if (days.value.isActive === true) {
+                  return <div>{days.value.name}</div>
+                }
+              })}
               name={data.name}
               description={data.description}
             />
           ))}
-          {/* <WorkoutCard class="cards" />
-       <WorkoutCard class="cards" />
-       <WorkoutCard class="cards" />
-       <WorkoutCard class="cards" />
-       <WorkoutCard class="cards" />
-       <WorkoutCard class="cards" /> */}
         </Row>
       </Container>
       </div>
