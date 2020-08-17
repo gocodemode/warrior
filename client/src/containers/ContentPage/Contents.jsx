@@ -17,7 +17,7 @@ class Contents extends Component {
 
   componentDidMount() {
     this.loadWorkouts()
-    this.handleSelect();
+    // this.handleSelect();
   }
 
   loadWorkouts = () => {

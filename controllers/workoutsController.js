@@ -80,8 +80,8 @@ module.exports = {
   update: async function(req, res) {
     db.Workouts
       .findOneAndUpdate({ _id: req.params.id }, 
-        {name: req.body.name})
-      .then(dbModel => console.log(dbModel))
+        {name: req.body.name}, {new: true})
+      .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form, Container, Button } from "react-bootstrap";
 import API from "../../utils/workouts";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./CreateWorkout.css";
 
 
@@ -16,6 +16,7 @@ const styles = {
 
 const CreateWorkout = () => {
   const [workout, setWorkouts] = useState();
+  const history = useHistory();
   const [formObject, setFormObject] = useState({
     name: "",
     location: "",
@@ -66,7 +67,9 @@ const CreateWorkout = () => {
 
       })
         .then(() =>
-        window.location.reload("/viewworkouts")
+        history.push("/viewworkouts")
+        // window.location.reload("/viewworkouts")
+        
         
         )
         .then(() => loadWorkouts())

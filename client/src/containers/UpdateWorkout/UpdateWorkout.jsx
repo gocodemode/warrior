@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, Redirect } from "react-router-dom";
 import API from "../../utils/workouts";
 import axios from "axios";
-
+// import { Redirect } from "react-router";
 
 const styles = {
   container: {
@@ -29,6 +29,7 @@ class UpdateWorkout extends Component {
     Thursday: false,
     Friday: false,
     Saturday: false,
+    redirect: false
     // },
   };
 
@@ -71,9 +72,7 @@ class UpdateWorkout extends Component {
   handleFormSubmit = (event) => {
     const id = this.props.match.params.id;
     event.preventDefault();
-    axios
-      .put(`/api/workouts/${id}`, {
-        name: this.state.name,
+    axios.put(`/api/workouts/${id}`, {name:this.state.name,
         location: this.state.location,
         description: this.state.description,
         Sunday: this.state.Sunday,
@@ -83,19 +82,26 @@ class UpdateWorkout extends Component {
         Thursday: this.state.Thursday,
         Friday: this.state.Friday,
       })
-
       .then((response) => {
         console.log(response.data);
-        setTimeout(() => {
-          window.location.replace("/viewworkouts");
-        }, 1500);
+        this.setState({redirect: true});
+        // return <Redirect to="/viewworkouts" />
+
+     
+        // setTimeout(() => {
+        //   window.location.reload("/viewworkouts");
+        // }, 1500);
       })
       .catch((err) => console.log(err));
   };
 
   render() {
+    if(this.state.redirect) {
+      return <Redirect to="/viewworkouts" />
+    } 
     return (
       <div>
+      
         <Container style={styles.container}>
           <Form onSubmit={this.handleFormSubmit}>
             <Form.Group>
@@ -128,7 +134,7 @@ class UpdateWorkout extends Component {
               />
               <br />
               <Form.Label>Date</Form.Label>
-              <p>This workout was previously scheduled on {}</p>
+              
               <Form.Check
                 id="Sunday"
                 label="Sunday"
