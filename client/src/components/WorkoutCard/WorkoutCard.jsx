@@ -23,7 +23,7 @@ const WorkoutCard = (props) => {
          <br></br>
          This Workout Occurs on {props.day}
         </Card.Text>
-        <Button id= "button" variant="primary" block>Go somewhere</Button>
+        <Button id= "button" variant="primary" block>Subscribe</Button>
       </Card.Body>
     </Card>
     </Col>

@@ -79,8 +79,9 @@ module.exports = {
   },
   update: async function(req, res) {
     db.Workouts
-      .findOneAndUpdate({ _id: req.params.id }, 
-        {name: req.body.name}, {new: true})
+      // .findOneAndUpdate({ _id: req.params.id }, 
+      //   {name: req.body.name}, {new: true})
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
