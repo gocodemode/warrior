@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ListGroup, Row, Button } from "react-bootstrap";
+import { Container, ListGroup, Row, Button, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import app from "../../utils/base";
 
@@ -33,20 +33,14 @@ const MyAccount = () => {
               <br />
             </ListGroup>
             <Row>
+              <Col>
               <Button variant="success" type="submit" style={styles.Button}>
-                <Link to="/updateaccount" id="white">
-                  Update Account
-                </Link>
-              </Button>
-              <Button variant="danger" type="submit" style={styles.Button}>
-                  Delete Account
-              </Button>
-              <Button variant="info" type="submit" style={styles.Button}>
                   <Link to="/viewworkouts" id="white">
                       My Workouts
                   </Link>
               </Button>
-              <Button variant="info" type="submit" style={styles.Button} onClick={() => app.auth().signOut()}>
+              </Col>
+              <Button variant="danger" type="submit" style={styles.Button} onClick={() => app.auth().signOut()}>
                   <Link to="/" id="white">
                       Sign Out
                   </Link>

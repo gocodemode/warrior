@@ -35,6 +35,7 @@ class ViewWorkouts extends Component {
   state = {
     workoutdata : []
   };
+  
   componentDidMount() {
     this.loadWorkouts();
   }
