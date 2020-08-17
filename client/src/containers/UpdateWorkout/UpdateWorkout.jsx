@@ -29,7 +29,8 @@ class UpdateWorkout extends Component {
     Thursday: false,
     Friday: false,
     Saturday: false,
-    redirect: false
+    redirect: false,
+
     // },
   };
 
@@ -83,7 +84,7 @@ class UpdateWorkout extends Component {
           { value: { isActive: this.state.Thursday, name: "Thursday" } },
           { value: { isActive: this.state.Friday, name: "Friday" } },
           { value: { isActive: this.state.Saturday, name: "Saturday" } }
-        ]
+        ],
         // Sunday:this.state.Sunday,
         // Monday:this.state.Monday,
         // Tuesday:this.state.Tuesday,
@@ -93,8 +94,9 @@ class UpdateWorkout extends Component {
       })
       .then((response) => {
         console.log(response.data);
+        // history.push("/viewworkouts")
         this.setState({redirect: true});
-        // return <Redirect to="/viewworkouts" />
+        return <Redirect to="/viewworkouts" />
 
      
         // setTimeout(() => {
