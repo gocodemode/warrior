@@ -32,7 +32,7 @@ const Workout = (props) => {
                 return (
                   <>
                     <ListGroup.Item>
-                      {props.name} is meeting at {props.location} for {props.description} on this day: {day.value.name}
+                    <strong>Name: </strong>{props.name} <br></br> <strong>Location: </strong>  {props.location}  <br></br> <strong>Description: </strong>  {props.description}<br></br>  <strong>Day: </strong> {day.value.name}
                       
                     </ListGroup.Item>
                     <InputGroup.Append>

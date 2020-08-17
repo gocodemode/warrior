@@ -47,7 +47,7 @@ const Signup = ({ history }) => {
               <Form onSubmit={handleSignUp}>
                 <Form.Group controlId="formBasicEmail">
                  
-                  <Form.Label id="white">Name</Form.Label>
+                  <Form.Label id="white">First Name</Form.Label>
                   <Form.Control id="lastName" type="text" name="name" />
                   <Form.Label id="white">Email address</Form.Label>
                    <Form.Control
