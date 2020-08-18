@@ -30,7 +30,6 @@ class UpdateWorkout extends Component {
     Friday: false,
     Saturday: false,
     redirect: false,
-
     // },
   };
 
@@ -98,7 +97,6 @@ class UpdateWorkout extends Component {
         this.setState({redirect: true});
         return <Redirect to="/viewworkouts" />
 
-     
         // setTimeout(() => {
         //   window.location.reload("/viewworkouts");
         // }, 1500);
@@ -107,12 +105,11 @@ class UpdateWorkout extends Component {
   };
 
   render() {
-    if(this.state.redirect) {
-      return <Redirect to="/viewworkouts" />
-    } 
+    if (this.state.redirect) {
+      return <Redirect to="/viewworkouts" />;
+    }
     return (
       <div>
-      
         <Container style={styles.container}>
           <Form onSubmit={this.handleFormSubmit}>
             <Form.Group>
@@ -145,7 +142,6 @@ class UpdateWorkout extends Component {
               />
               <br />
               <Form.Label>Date</Form.Label>
-              
               <Form.Check
                 id="Sunday"
                 label="Sunday"

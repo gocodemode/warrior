@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import CardDeck from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -9,6 +10,7 @@ import "./style.css";
 const WorkoutCard = (props) => {
   return (
     <Col sm={4}>
+      <CardDeck>
     <Card className= "grow" id="workoutCard" style={{ width: "18rem" }} style={{margin: "15px"}}>
       <Card.Img id="cardImage" variant="top" src="/Images/yogaonroof.jpg" />
       <Card.Body>
@@ -35,6 +37,7 @@ const WorkoutCard = (props) => {
         
       </Card.Body>
     </Card>
+    </CardDeck>
     </Col>
   );
 };
