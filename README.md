@@ -26,9 +26,9 @@ By: Project Team 4<br>
 ## User Story
 
 <i>
-As a remote learner,<br> 
-I want to find an place to safely workout during Covid-19,<br>
-So that I can workout without fear of working out in an unsafe area.
+As a user who aspires to do yoga, I want to find workout sessions located in my area that adhere to CDC guidelines during this pandemic times. I will learn the importance of B.E.S.A.F.E. before signing up for any session and adhere to those rules in order to practice with others.
+
+As an certified instructor, I will be able to view the workouts that I have on my schedule. I will be able to create, update and delete any sessions of my choosing. 
 <i>
 
 ## Credits
@@ -60,7 +60,7 @@ The application requires firebase and react-router package in order to authentic
 <i>
 MIT License
 
-Copyright (c) [2020][Jennifer Daeumler, Kaleb Garrison,Christina Starr, Maya Stucky]
+Copyright (c) [2020][Brian Warner, Kaleb Garrison,Christina Starr, Gregory Monroe II]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
