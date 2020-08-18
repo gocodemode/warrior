@@ -29,7 +29,8 @@ class UpdateWorkout extends Component {
     Thursday: false,
     Friday: false,
     Saturday: false,
-    redirect: false
+    redirect: false,
+
     // },
   };
 
@@ -73,19 +74,29 @@ class UpdateWorkout extends Component {
     const id = this.props.match.params.id;
     event.preventDefault();
     axios.put(`/api/workouts/${id}`, {name:this.state.name,
-        location: this.state.location,
-        description: this.state.description,
-        Sunday: this.state.Sunday,
-        Monday: this.state.Monday,
-        Tuesday: this.state.Tuesday,
-        Wednesday: this.state.Wednesday,
-        Thursday: this.state.Thursday,
-        Friday: this.state.Friday,
+        location:this.state.location,
+        description:this.state.description,
+        daysArray: [
+          { value: { isActive: this.state.Sunday, name: "Sunday" } },
+          { value: { isActive: this.state.Monday, name: "Monday" } },
+          { value: { isActive: this.state.Tuesday, name: "Tuesday" } },
+          { value: { isActive: this.state.Wednesday, name: "Wednesday" } },
+          { value: { isActive: this.state.Thursday, name: "Thursday" } },
+          { value: { isActive: this.state.Friday, name: "Friday" } },
+          { value: { isActive: this.state.Saturday, name: "Saturday" } }
+        ],
+        // Sunday:this.state.Sunday,
+        // Monday:this.state.Monday,
+        // Tuesday:this.state.Tuesday,
+        // Wednesday:this.state.Wednesday,
+        // Thursday:this.state.Thursday,
+        // Friday:this.state.Friday,
       })
       .then((response) => {
         console.log(response.data);
+        // history.push("/viewworkouts")
         this.setState({redirect: true});
-        // return <Redirect to="/viewworkouts" />
+        return <Redirect to="/viewworkouts" />
 
      
         // setTimeout(() => {
