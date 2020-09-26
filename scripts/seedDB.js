@@ -10,62 +10,73 @@ const workoutSeed = [
     name: "Bikram Yoga",
     description: "Hot yoga in a studio.",
     location: "Columbus",
-    Sunday: false,
-    Monday: false,
-    Tuesday: false,
-    Wednesday: false,
-    Thursday: false,
-    Friday: false,
-    Saturday: true,
+    daysArray: [
+      {
+        value: {
+          isActive: true,
+          name: "Saturday",
+        }
+      }
+    ]  
   },
   {
     name: "Afternoon Yoga",
     description: "Yoga in the park",
     location: "Savannah",
-    Sunday: false,
-    Monday: false,
-    Tuesday: false,
-    Wednesday: false,
-    Thursday: true,
-    Friday: false,
-    Saturday: false,
+    daysArray: [
+      {
+        value: {
+          isActive: true,
+          name: "Thursday",
+        }
+      }
+    ]
   },
   {
     name: "Yoga in the morning",
     description: "Yoga at sunrise.",
     location: "Atlanta",
-    Sunday: false,
-    Monday: false,
-    Tuesday: false,
-    Wednesday: true,
-    Thursday: false,
-    Friday: false,
-    Saturday: false,
+    daysArray: [
+      {
+        value: {
+          isActive: true,
+          name: "Wednesday",
+        },
+      }
+    ]
   },
   {
     name: "Downward Dog Yoga",
     description: "Yoga in the park next to City Hall",
     location: "Savannah",
-    Sunday: true,
-    Monday: false,
-    Tuesday: true,
-    Wednesday: false,
-    Thursday: false,
-    Friday: false,
-    Saturday: false,
+    daysArray: [
+      {
+        value: {
+          isActive: true,
+          name: "Sunday",
+        },
+      },
+      {
+        value: {
+          isActive: true,
+          name: "Tuesday",
+        },
+      }
+    ]
   },
   {
     name: "Sunset Yoga",
     description: "Yoga in the park",
     location: "Columbus",
-    Sunday: false,
-    Monday: true,
-    Tuesday: false,
-    Wednesday: false,
-    Thursday: false,
-    Friday: false,
-    Saturday: false,
-  },
+    daysArray: [
+      {
+        value: {
+          isActive: true,
+          name: "Monday",
+        }
+      }
+    ]
+  }
 ];
 
 db.Workouts.remove({})
