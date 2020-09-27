@@ -12,96 +12,98 @@ class Contents extends Component {
   state = {
     location: [],
     eventKey: "",
-    workoutdata: []
+    workoutdata: [],
   };
 
   componentDidMount() {
-    this.loadWorkouts()
-   
+    this.loadWorkouts();
   }
 
   loadWorkouts = () => {
     API.getWorkouts()
-      .then(res => {
+      .then((res) => {
         console.log(res.data);
-        this.setState({workoutdata: res.data});
-        
-      }) 
-      .catch(err => console.log(err));
+        this.setState({ workoutdata: res.data });
+      })
+      .catch((err) => console.log(err));
   };
 
   handleSelect = (event) => {
     console.log(event);
-    
-    API.getWorkoutLocation(event)
-      .then((res) => {
-      
-        console.log(res.data);
-        this.setState({ location: res.data });
-        
-        console.log({ location: res.data });
-      })
-      .then((res) => {
-        this.setState({workoutdata: []});
-      })
+    if (event === "allcities") {
+      this.loadWorkouts();
+    } else {
+      API.getWorkoutLocation(event)
+        .then((res) => {
+          console.log(res.data);
 
-      .catch((err) => console.log(err));
+          this.setState({ location: res.data });
+
+          console.log({ location: res.data });
+        })
+        .then((res) => {
+          this.setState({ workoutdata: [] });
+        })
+
+        .catch((err) => console.log(err));
+    }
   };
-
 
   render() {
     return (
       <div>
-      <Container>
-        <Row id="filterRow">
-          <Col sm={2} id="filterCol">
-            <DropdownButton
-              alignRight
-              title="Filter Workout By City"
-              id="dropdown-menu-align-right"
-              onSelect={this.handleSelect}
-            >
-              <Dropdown.Item eventKey="Atlanta">Atlanta</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item eventKey="Augusta">Augusta</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item eventKey="Columbus">Columbus</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item eventKey="Savannah">Savannah</Dropdown.Item>
-            </DropdownButton>
-          </Col>
-        </Row>
-        <Row>
-          {this.state.location.map((data) => (
-            <WorkoutCard
-              class="cards"
-              location={data.location}
-              day={data.daysArray.map((days) => {
-                console.log(days)
-                if (days.value.isActive === true) {
-                  return <div>{days.value.name}</div>
-                }
-              })}
-              name={data.name}
-              description={data.description}
-            />
-          ))}
-           {this.state.workoutdata.map((data) => (
-            <WorkoutCard
-              class="cards"
-              location={data.location}
-              day={data.daysArray.map((days) => {
-                console.log(days)
-                if (days.value.isActive === true) {
-                  return <div>{days.value.name}</div>
-                }
-              })}
-              name={data.name}
-              description={data.description}
-            />
-          ))}
-        </Row>
-      </Container>
+        <Container>
+          <Row id="filterRow">
+            <Col sm={2} id="filterCol">
+              <DropdownButton
+                alignRight
+                title="Filter Workout By City"
+                id="dropdown-menu-align-right"
+                onSelect={this.handleSelect}
+              >
+                <Dropdown.Item onSelect={this.loadWorkouts}>All Cities</Dropdown.Item>
+                <Dropdown.Divider  />
+                <Dropdown.Item eventKey="Atlanta">Atlanta</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item eventKey="Augusta">Augusta</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item eventKey="Columbus">Columbus</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item eventKey="Savannah">Savannah</Dropdown.Item>
+              </DropdownButton>
+            </Col>
+          </Row>
+          <Row>
+            {this.state.location.map((data) => (
+              <WorkoutCard
+                class="cards"
+                location={data.location}
+                day={data.daysArray.map((days) => {
+                  console.log(days);
+                  if (days.value.isActive === true) {
+                    return <div>{days.value.name}</div>;
+                  }
+                })}
+                name={data.name}
+                description={data.description}
+              />
+            ))}
+            {this.state.workoutdata.map((data) => (
+              <WorkoutCard
+                class="cards"
+                location={data.location}
+                day={data.daysArray.map((days) => {
+                  console.log(days);
+                  if (days.value.isActive === true) {
+                    return <div>{days.value.name}</div>;
+                  }
+                })}
+                name={data.name}
+                description={data.description}
+              />
+            ))}
+          </Row>
+        </Container>
       </div>
     );
   }
