@@ -15,8 +15,9 @@ class Home extends Component {
             <Col xs={{ span: 8, offset: 2 }}> 
               <div id="serenity">
                 <Row>
-                  <Col xs="4" id="suave">
-                    <h5>Welcome to Warrior. Workout with a supportive community that always strives to B.E.S.A.F.E.</h5>
+                  <Col xs="5" id="suave">
+                    <h3>Welcome to Warrior</h3> 
+                    <h5>Workout with a supportive community that always strives to B.E.S.A.F.E.</h5>
                     <Button variant="warning">
                       <Link to="/contents" id="white">
                         View Workouts
@@ -25,7 +26,7 @@ class Home extends Component {
                   </Col>
                 </Row>
               </div>
-              </Col>
+            </Col>
           </Row>
         </Container>
       </div>

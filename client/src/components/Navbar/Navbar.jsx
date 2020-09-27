@@ -11,7 +11,7 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" fixed="top">
           <Col>
           <Navbar.Brand href="/">
             <img

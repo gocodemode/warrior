@@ -6,8 +6,16 @@
     background-size: 675px 650px;
 }
 
+background {
+    background-color: white;
+}
+
 #one {
     padding: 75px;
+}
+
+h3 {
+    color: white;
 }
 
 h5 {
@@ -15,7 +23,7 @@ h5 {
 }
 
 #suave {
-    margin-top: 147px;
+    margin-top: 155px;
     margin-left: 50px;
 }
 
