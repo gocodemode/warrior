@@ -11,33 +11,31 @@ const WorkoutCard = (props) => {
   return (
     <Col sm={4}>
       <CardDeck>
-    <Card className= "grow" id="workoutCard" style={{ width: "18rem" }} style={{margin: "15px"}}>
-      <Card.Img id="cardImage" variant="top" src="/Images/yogaonroof.jpg" />
-      <Card.Body>
-        <Card.Title id="title">{props.name}</Card.Title>
-        <Card.Text id="cardText">
-         <strong>About:</strong> 
-         <br></br>
-         {props.description } 
-         <br></br>
-         <strong>Location:</strong>
-         <br></br>
-         {props.location}
-         <br></br>
-         <strong>Days of the Week:</strong> 
-         <br></br>
-         {props.day}
-         <br></br>
-         Subscribe to our mailing list for future workouts!
-        </Card.Text>
-        <Button id= "button" variant="primary" block>
-          <Link to ="/subscribe" id="white">Subscribe</Link>
-        
-        </Button>
-        
-      </Card.Body>
-    </Card>
-    </CardDeck>
+        <Card id="workoutCard" style={{ width: "18rem" }} style={{margin: "15px"}}>
+          <Card.Img id="cardImage" variant="top" src="/Images/yogaonroof.jpg" />
+          <Card.Body>
+            <Card.Title id="title">{props.name}</Card.Title>
+            <Card.Text id="cardText">
+              <strong>About:</strong> 
+              <br/>
+              {props.description } 
+              <br/>
+              <strong>Location:</strong>
+              <br/>
+              {props.location}
+              <br/>
+              <strong>Days of the Week:</strong> 
+              <br/>
+              {props.day}
+              <br/>
+              Subscribe to our mailing list for future workouts!
+            </Card.Text>
+            <Button id= "button" variant="primary" block>
+              <Link to ="/subscribe" id="white">Subscribe</Link>
+            </Button>
+          </Card.Body>
+        </Card>
+      </CardDeck>
     </Col>
   );
 };
