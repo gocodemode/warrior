@@ -27,9 +27,6 @@ const Footer = () => {
             <Col>
               &copy;{new Date().getFullYear()} KGB-C | All Rights Reserved
             </Col>
-            <Col style={styles.alignRight}>
-            <Link to="/login" id="orange">Instructor Login</Link>
-          </Col>
           </Row>
         </Container>
       </footer>

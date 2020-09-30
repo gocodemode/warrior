@@ -1,15 +1,20 @@
 #workoutCard {
-    border-radius: 20px;
+    /* border-radius: 20px;
     border: 5px solid #DE6D40;
-    padding: 10px;
-    /* width: 200px;
-    height: 150px; */
+    padding: 10px; */
+    /* width: 200px; */
+    /* min-height: 500px; */
     margin-bottom: 15px;
+    background-color: #FFFFFF; 
     
 }
 
+#workoutCard:hover {
+    box-shadow: 0 1px 10px 0 rgba(18, 79, 158, 0.4);
+}
+
 #cardImage {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     /* height: 100% */
 }
 
@@ -22,11 +27,5 @@
 }
 
 #button {
-   /* text: center; */
-}
-
-.grow:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+   background-color: #E75424;
 }

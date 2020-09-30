@@ -33,6 +33,19 @@ const workoutSeed = [
     ]
   },
   {
+    name: "Hot Yoga",
+    description: "Yoga in our studio!",
+    location: "Augusta",
+    daysArray: [
+      {
+        value: {
+          isActive: true,
+          name: "Friday",
+        }
+      }
+    ]
+  },
+  {
     name: "Yoga in the morning",
     description: "Yoga at sunrise.",
     location: "Atlanta",

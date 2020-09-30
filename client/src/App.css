@@ -1,5 +1,5 @@
 html {
-    background-color: #F4D1CE;
+    background-color: #EAEAEA;
     height: 100%;
     margin: 0px;
     height: 0px;
@@ -11,6 +11,7 @@ body {
     margin: 0px;
     height: 0px;
     margin-bottom: 3em;
+    margin-top: 3em;
 }
 
 .page-container {
