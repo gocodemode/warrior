@@ -10,7 +10,7 @@ const styles = {
     marginLeft: "auto",
     marginRight: "auto",
     border: "10px solid #df6d3e",
-    backgroundColor: "#df6d3e",
+    backgroundColor: "#2b2d2f",
     padding: 30,
   },
 };
